@@ -14,18 +14,22 @@
     <main>
         <h1>Whack-a-Mole</h1>
 
-        <button id="start-game">Start</button>
+        <button id="start-btn">Start</button>
+
+        <div id="timer">
+            <p>Time Left: <span id="time-left">0</span>s</p>
+        </div>
 
         <div>
             <p>Score: <span id="score">0</span></p>
         </div>
 
         <div class="grid">
-            <div id="tile-1" class="tile mole"></div>
+            <div id="tile-1" class="tile"></div>
             <div id="tile-2" class="tile"></div>
             <div id="tile-4" class="tile"></div>
             <div id="tile-4" class="tile"></div>
-            <div id="tile-5" class="tile"></div>
+            <div id="tile-5" class="tile mole"></div>
             <div id="tile-6" class="tile"></div>
             <div id="tile-7" class="tile"></div>
             <div id="tile-8" class="tile"></div>
