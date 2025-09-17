@@ -15,3 +15,11 @@ body {
     height: 200px;
     border: solid 2px black;
 }
+
+/** The mole that appears on the tiles **/
+.mole {
+    background-image: url(../assets/images/mole.webp);
+    background-size: 120px 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
