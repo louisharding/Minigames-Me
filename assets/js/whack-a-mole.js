@@ -14,6 +14,10 @@ let scoreText = document.getElementById("score-text");
 let timeLeftText = document.getElementById("time-left");
 const gridTiles = document.querySelectorAll(".tile");
 
+//test
+for (const tile of gridTiles) {
+    tile.addEventListener("click", whackMole);
+}
 
 // Event Listeners
 startBtn.addEventListener('click', startGame);
@@ -43,9 +47,9 @@ function moveMole() {
     moleTimer = setInterval(getRandomTile, moleInterval);    
 }
 
-// function removeMole(tile) {
-//     tile.classList.remove('mole');
-// }
+function removeMole(tile) {
+    tile.classList.remove('mole');
+}
 
 // Loop through grids with class "tile", 
 // pick a random tile for the mole css class to be added
@@ -73,6 +77,17 @@ function getRandomTile() {
 
 }
 
+// Not using buttons, so will check for mouse click on elements
+function whackMole(event) {
+    // Check for mole class
+    if(event.target.classList.contains('mole')) 
+    {
+        console.log("clicked on mole!");
+        removeMole(event.target);
+    }
+}
+
+//
 function getRandomNumber(maxNumber) {
     return Math.floor(Math.random() * maxNumber);
 }
