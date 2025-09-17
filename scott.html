@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+<div id="grid-container"></div>
+<br>
+<br>
+<div id="grid-container">
+    <div>1</div>
+</div>
+    <script>
+
+
+
+
+
+const rows = 5; // number of rows
+const cols = 5; // number of columns
+const container = document.getElementById('grid-container');
+
+// Apply CSS grid styles
+container.style.display = 'grid';
+container.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+container.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+container.style.gap = '5px'; // optional
+
+// Create grid cells
+for (let i = 0; i < rows * cols; i++) {
+  const cell = document.createElement('div');
+  cell.style.border = '1px solid #ccc';
+  cell.style.background = '#f9f9f9';
+  cell.textContent = i + 1; // optional: cell number
+  container.appendChild(cell);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+    
+    </script>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
