@@ -1,0 +1,55 @@
+/* Apply retro-futuristic font to entire page */
+body {
+  font-family: "Orbitron", sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Navbar container */
+#navbar {
+  background-color: #4b3f72; /* Soft retro purple */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #00c9a7; /* Aqua accent */
+}
+
+/* Brand logo and text */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00c9a7;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.logo-img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-right: 12px;
+  border-radius: 10px;
+  border: 2px solid #00c9a7;
+}
+
+/* Nav links */
+.navbar-nav .nav-link {
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #00c9a7;
+  color: #4b3f72;
+}
+
+.navbar-nav .nav-link.active {
+  background-color: #00c9a7;
+  color: #4b3f72;
+  font-weight: bold;
+}

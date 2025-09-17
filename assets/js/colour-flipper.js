@@ -24,3 +24,7 @@ function changeColour() {
 function getRandomNumber() {
     return Math.floor(Math.random() * hexValues.length);
 }
+
+// Credits
+// Used tutorial from freeCodeCamp.org to help with understanding
+// https://www.youtube.com/watch?v=3PHXvlpOkf4&t=421s&ab_channel=freeCodeCamp.org
