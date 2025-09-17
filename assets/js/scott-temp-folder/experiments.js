@@ -55,7 +55,7 @@ console.log("a random number:" , randomArrayIndex())
         console.log("pairs array, array target" , pairsArray[arrayTarget])
         valuesSaved++
         console.log(valuesSaved++)
-     }
+     } //else {continue}  //is this needed?  THIS IS WHERE I CURRENTLY AM IN THE DEBUGGING
     //  break
     }
     // break
