@@ -25,7 +25,7 @@ const getPairs = function(rows, cols) {
 
   /**Function for random array index */
   const randomArrayIndex = function() {
-    Math.floor(Math.random() * highestNumber)
+    return Math.floor(Math.random() * highestNumber)
   }
 
   // this chunk of code goes through each number that is to be saved as a pair
