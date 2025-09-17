@@ -1,0 +1,17 @@
+body {
+    background-color: burlywood;
+}
+
+.grid {
+    width: 612px;
+    height: 612px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    background-color: lightgreen;
+    width: 200px;
+    height: 200px;
+    border: solid 2px black;
+}
