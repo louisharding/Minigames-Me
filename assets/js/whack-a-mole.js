@@ -1,54 +1,63 @@
 // Const values
 const gridSize = 9;
 
-
 // Let
 let score = 0;
 let moveMoleInterval = 2; // seconds = 2000 milliseconds
-let gameDuration = 30; // seconds = 30000 milliseconds
+let gameDuration = 15; // seconds = 30000 milliseconds
 // let previousTile; // make sure that the mole always moves to a new tile
+let isGameActive = false;
+
+let timerLeftInterval = null;
+let moleInterval = null;
 
 // Selectors
 const startBtn = document.getElementById("start-btn");
 let scoreText = document.getElementById("score-text");
 let timeLeftText = document.getElementById("time-left");
 const gridTiles = document.querySelectorAll(".tile");
-
-//test
-for (const tile of gridTiles) {
-    tile.addEventListener("click", whackMole);
-}
+let gameOverMessageText = document.getElementById("game-over-message")
 
 // Event Listeners
 startBtn.addEventListener('click', startGame);
 
+for (const tile of gridTiles) {
+    tile.addEventListener("click", checkForMole);
+}
+
 // Functions
 function startGame() {
     score = 0;
+    isGameActive = true;
     console.log("Game Started");
-    // startTimer();
-    moveMole();
-    
+    startBtn.disabled = true;
+    startTimer(gameDuration, timeLeftText);
+    moveMole();    
 }
 
+function startTimer (seconds, displayElement) {
+    let counter = seconds;
 
-function startTimer () {
-    timeLeftText.innerText = gameDuration.toString();
+    timerLeftInterval = setInterval(() => {
+        counter--;
+        displayElement.innerText = counter.toString();
+
+        if(counter <= 0)
+        {
+            isGameActive = false;
+            clearInterval(timerLeftInterval);
+            clearInterval(moleInterval)
+
+            gameOverMessageText.innerText = `Times up! Your scored: ${score}!`;
+        }
+    }, 1000); // milliseconds = 1 second    
 }
 
-
-function moveMole() {   
-    let moleTimer = null;
-
-    let moleInterval = convertToMilliseconds(moveMoleInterval);
-
-    // console.log(moleInterval);
-
-    moleTimer = setInterval(getRandomTile, moleInterval);    
-}
-
-function removeMole(tile) {
-    tile.classList.remove('mole');
+function moveMole() {
+    if(isGameActive)
+    {
+        moleInterval = setInterval(getRandomTile, convertToMilliseconds(moveMoleInterval));
+    }
 }
 
 // Loop through grids with class "tile", 
@@ -63,31 +72,28 @@ function getRandomTile() {
         tile.classList.remove('mole');
     }
     gridTiles[chosenTile].classList.add('mole');
-
-
-    // for (let i = 0; i < gridSize; i++)
-    // {
-    //     if(i === chosenTile)
-    //     {
-    //         gridTiles[i].classList.add('mole');
-    //         break;
-    //     }
-
-    // }
-
 }
 
 // Not using buttons, so will check for mouse click on elements
-function whackMole(event) {
-    // Check for mole class
-    if(event.target.classList.contains('mole')) 
-    {
-        console.log("clicked on mole!");
-        removeMole(event.target);
-    }
+function checkForMole(event) {
+    if (isGameActive) {
+        // Check for mole class
+        if (event.target.classList.contains('mole')) 
+        {
+            console.log("clicked on mole!");        
+            removeMole(event.target);
+
+            score += 1;
+            scoreText.innerText = score.toString();
+        }
+    }   
 }
 
-//
+function removeMole(tile) {
+    tile.classList.remove('mole');
+}
+
+// Helper functions
 function getRandomNumber(maxNumber) {
     return Math.floor(Math.random() * maxNumber);
 }
@@ -95,7 +101,3 @@ function getRandomNumber(maxNumber) {
 function convertToMilliseconds(seconds) {
     return seconds * 1000;
 }
-
-// function convertToSeconds(milliseconds) {
-//     return milliseconds / 1000;
-// }
