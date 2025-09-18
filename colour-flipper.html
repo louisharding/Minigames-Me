@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Minigames Me | Colour Flipper</title>
   </head>
+
   <body>
+    <!-- Insert navbar pulled from navbar.html -->
+    <div id="navbar"></div>
+
     <!-- Main -->
     <main>
       <h1>Colour Flipper</h1>
@@ -18,6 +22,18 @@
 
     <button id="colour-btn">Click me!</button>
 
+    <!-- SCRIPTS -->
+    <!-- Get the nabar HTML:
+         Fetch function asks the browser to get the navbar.html,
+         which then coverts the data to HTML text,
+         and inserts it into the element with the #navbar -->
+    <script>
+      fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+    </script>    
     <script src="assets/js/colour-flipper.js"></script>
   </body>
 </html>
