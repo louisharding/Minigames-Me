@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #191b20;
+    background-color: #292c34;
     color: white;
 }
 
@@ -36,4 +36,39 @@ body {
     position: absolute;
     top: 30px;
     right: -30px;
+}
+
+.result {
+    font-size: 40px;
+}
+
+.result > p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.choices {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.choice {
+    display: inline-block;
+    border: 4px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 20px;
+    transition: all 0.2s ease;
+}
+
+.choice:hover {
+    cursor: pointer;
+    background: #141519
+}
+
+#action-message {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
 }
