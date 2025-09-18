@@ -14,24 +14,6 @@
   </head>
   <body>
     <header>
-      <nav id="navbar" class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="assets/images/arcadeimage.png" alt="Minigames Logo" class="logo-img" />
-            <span class="ms-2">Minigames-Me</span>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
     </header>
     <main class="container py-4">
       <h1 class="text-center mb-4">Minigames Me</h1>
@@ -58,8 +40,36 @@
         </div>
       </section>
     </main>
+    <div class="shooting-star-bg"></div>
     <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <script>
+function randomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+const starImgs = [
+  'assets/images/star1.png',
+  'assets/images/star2.png',
+  'assets/images/star3.png',
+  'assets/images/star4.png'
+];
+function createShootingStar() {
+  const star = document.createElement('div');
+  star.className = 'shooting-star';
+  const duration = randomInt(2, 5);
+  const top = randomInt(0, 50);
+  star.style.top = top + 'vh';
+  star.style.left = randomInt(-10, 10) + 'vw';
+  star.style.animationDuration = duration + 's';
+  star.style.animationTimingFunction = `cubic-bezier(${Math.random().toFixed(2)},${Math.random().toFixed(2)},${Math.random().toFixed(2)},${Math.random().toFixed(2)})`;
+  star.style.setProperty('--star-end-scale', (Math.random() * 0.5 + 0.3).toFixed(2));
+  // Randomly choose one of the 4 star images
+  star.style.backgroundImage = `url('${starImgs[randomInt(0, starImgs.length - 1)]}')`;
+  document.querySelector('.shooting-star-bg').appendChild(star);
+  setTimeout(() => star.remove(), duration * 1000);
+}
+setInterval(createShootingStar, 800);
+    </script>
   </body>
 </html>

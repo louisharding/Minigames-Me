@@ -7,6 +7,15 @@
   --purple: #4b3f72;
   --accent: #00c9a7;
   --text: #333;
+  /* Shooting Star Background - Customizable */
+  --star-img1: url(/assets/images/controllerIcons1.png);
+  --star-img2: url(/assets/images/controllerIcons2.png);
+  --star-img3: url(/assets/images/controllerIcons3.png);
+  --star-img4: url(/assets/images/controllerIcons4.png);
+  --star-opacity: 0.7;
+  --star-size: 64px;
+  --star-hue: 1deg;
+  --star-orientation: 1deg;
 }
 
 html, body {
@@ -15,19 +24,55 @@ html, body {
 
 body {
   font-family: var(--main-font);
-  background: linear-gradient(#f4f4f9 0%, #a1c4fd 50%, #c2e9fb 100%);
-  background-repeat: no-repeat;
+  background: linear-gradient(to bottom,  #000000 33%,#9993ff 70%,#4538ff 85%,#1500ff 98%,#9e24f4 99.9%); 
+  /* background-image: url(/assets/images/controllerIcons.png), linear-gradient(to bottom,  #000000 33%,#9993ff 70%,#4538ff 85%,#1500ff 98%,#9e24f4 99.9%); ; */
+  background-blend-mode: overlay;
+  background-size: 5%;
+  opacity: 0.9;
   color: var(--main-text);
   margin: 0;
   padding: 0;
 }
+
+/* Shooting Star Background */
+.shooting-star-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+}
+.shooting-star {
+  position: absolute;
+  width: var(--star-size);
+  height: var(--star-size);
+  opacity: var(--star-opacity);
+  filter: hue-rotate(var(--star-hue));
+  transform: rotate(var(--star-orientation));
+  background: var(--star-img) no-repeat center/contain;
+  animation: shooting-star-move 3s linear infinite;
+}
+@keyframes shooting-star-move {
+  0% {
+    left: -10vw;
+    transform: scale(1);
+  }
+  100% {
+    left: 110vw;
+    transform: scale(var(--star-end-scale, 0.5));
+  }
+}
+
+
 
 /* Reusable game container for all games */
 .game-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #751b1b;
+  background: #8d4c4c;
   border-radius: 16px;
   box-sizing: border-box;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
@@ -47,18 +92,15 @@ body {
 /* Shared grid styles for all games */
 .game-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(3, 1fr);    /* 3 rows */
   gap: 1rem;
   width: 100%;
   max-width: 612px;
+  margin: 0 auto;
 }
 
 /* Generic Game Styles */
-/* 
-    Styles for the game information section.
-    This selector targets the element displaying game-related details,
-    such as score, level, or instructions.
-*/
 #game-info {
   display: flex;
 }
@@ -106,7 +148,7 @@ body {
 }
 
 
-/* Status text (DISPLAYS STATUS -PLAYER 1 or PLAYER 2 NOT NEEDED */
+/* Tic tac toe Status text (DISPLAYS STATUS -PLAYER 1 or PLAYER 2 NOT NEEDED */
 #status {
   color: #4b3f72;
   font-size: 1.1rem;
@@ -117,34 +159,9 @@ body {
 
 
 /* Whack-a-mole AKA wam */
-/* .wam-grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  width: 612px;
-  height: 612px;
-} */
-
-/*
- * This code defines a selection of functionality.
- * Please provide the actual code or context for more specific documentation.
- */
-.wam-tile {
-  width: 200px;
-  height: 200px;
-}
-
-/*
- * This code defines a functionality based on the user's selection.
- * It performs operations or manipulations on the selected code segment.
- * The implementation may include processing, transformation, or analysis
- * of the selected code, depending on the context in which it is used.
- */
 .wam-tile:hover {
   background: #b2ffb2;
 }
-
-
 /* 
     The .mole class styles the mole element in the Minigames-Me project.
     Typically used to represent a mole in a whack-a-mole game.
@@ -251,3 +268,4 @@ body {
   transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(75, 63, 114, 0.12);
 }
+
