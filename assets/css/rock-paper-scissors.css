@@ -1,3 +1,4 @@
+/* Page styles */
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +10,19 @@ body {
   color: white;
 }
 
+/* Game */
 #game-container {
   background-color: #363a45;
 }
 
+#game-title {
+  color: #e2584d;
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+/* Score board */
 .score-board {
   border: 3px solid white;
   border-radius: 4px;
@@ -42,15 +52,17 @@ body {
   right: -20px;
 }
 
+/* Result message */
 .result {
   font-size: 40px;
 }
 
 .result > p {
   text-align: center;
-  font-weight: bold;
+  font-weight: semi-bold;
 }
 
+/* Choices */
 .choices {
   margin-top: 50px;
   text-align: center;
@@ -70,6 +82,7 @@ body {
   background: #141519;
 }
 
+/* Action message */
 #action-message {
   text-align: center;
   font-weight: bold;
