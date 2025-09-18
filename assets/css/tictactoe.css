@@ -1,69 +1,73 @@
-/* Base layout and font */
+/* Tic-Tac-Toe Styles - Optimized */
+:root {
+  --primary: #4b3f72;
+  --accent: #00c9a7;
+  --bg: #f4f4f9;
+  --text: #333;
+  --cell-size: 100px;
+  --cell-radius: 8px;
+}
+
 body {
   font-family: "Orbitron", sans-serif;
   text-align: center;
-  background-color: #f4f4f9;
+  background: var(--bg);
   margin: 0;
   padding: 2rem;
-  color: #333;
+  color: var(--text);
 }
 
-/* Page title */
 h1 {
   font-size: 2rem;
-  color: #4b3f72;
+  color: var(--primary);
   margin-bottom: 1.5rem;
   text-transform: uppercase;
 }
 
-/* Game board layout */
 #game {
   display: grid;
-  grid-template-columns: repeat(3, 100px);
+  grid-template-columns: repeat(3, var(--cell-size));
   gap: 10px;
   justify-content: center;
   margin-bottom: 1.5rem;
 }
 
-/* Individual cell styling */
 .cell {
-  width: 100px;
-  height: 100px;
-  background: white;
-  border: 2px solid #4b3f72;
+  width: var(--cell-size);
+  height: var(--cell-size);
+  background: #fff;
+  border: 2px solid var(--primary);
   font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border-radius: 8px;
-  transition: background 0.2s ease;
+  border-radius: var(--cell-radius);
+  transition: background 0.2s;
 }
 
 .cell:hover {
   background: #e0e0e0;
 }
 
-/* Status message */
 #status {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #4b3f72;
+  color: var(--primary);
 }
 
-/* Reset button */
 #reset {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
-  background-color: #4b3f72;
+  background: var(--primary);
   color: #fff;
   border: none;
   border-radius: 6px;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s;
 }
 
 #reset:hover {
-  background-color: #00c9a7;
+  background: var(--accent);
   color: #121212;
 }
