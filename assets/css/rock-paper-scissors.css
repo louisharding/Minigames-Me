@@ -1,8 +1,10 @@
-body {
+/* body {
   text-align: center;
-}
+} */
 
-/* Score board - RPS specific */
+/* Score board - RPS specific 
+  LOOK INTO CONSOLIDATING WITH GAME-INFO 
+*/
 .score-board {
   border: 3px solid #333;
   border-radius: 4px;
@@ -14,6 +16,7 @@ body {
   position: relative;
 }
 
+/* You vs AI bagdes to left and right of score */
 .rps-badge {
   background: #4b3f72;
   color: white;
@@ -23,6 +26,7 @@ body {
   top: 35px;
 }
 
+
 #user-label {
   left: -25px;
 }
@@ -31,16 +35,19 @@ body {
   right: -20px;
 }
 
-/* Result message */
+/* Result message 
+LOOK INTO CONSOLIDATING WITH GAME-INFO 
+*/
 .result {
   font-size: 40px;
 }
 
-/* Choices */
+/* Choices - container for the choices; Rock, Paper and Scissors*/
 .choices {
   margin-top: 50px;
 }
 
+/* Icon for each choice of Rock, Paper or Scissors */
 .choice {
   display: inline-block;
   border: 4px solid #333;
@@ -50,6 +57,7 @@ body {
   transition: all 0.2s ease;
 }
 
+/* Icons for choices */
 .rps-icon {
   width: 80px;
   height: 80px;
@@ -60,7 +68,7 @@ body {
   background: #4b3f72;
 }
 
-/* Action message */
+/* Action message - Make your move */
 #action-message {
   font-size: 20px;
   margin-top: 20px;
