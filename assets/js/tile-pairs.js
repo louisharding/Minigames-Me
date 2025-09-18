@@ -1,3 +1,5 @@
+console.log("start of script")
+
 /**this function creates the grid */ 
 const createGrid = function(rows, cols) {
   const pairsArray = createPairsArray(rows,cols)
