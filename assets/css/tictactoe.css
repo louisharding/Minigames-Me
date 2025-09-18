@@ -10,7 +10,7 @@
   --cell-radius: 8px;
 }
 
-/* Page background and base font */
+/* Page background and base font NOT NEEDED  */
 body {
   background: var(--bg);
   color: var(--text);
@@ -26,7 +26,7 @@ main.game-container {
   box-sizing: border-box;
 }
 
-/* Page title */
+/* Page title NOT NEEDED*/
 h1 {
   font-size: 2rem;
   color: var(--primary);
@@ -44,7 +44,7 @@ h1 {
   margin: 1rem auto 1.25rem auto;
 }
 
-/* Individual cell */
+/* Individual cells in TIC TAC TOE GRID -  */
 .cell {
   width: var(--cell-size);
   height: var(--cell-size);
@@ -59,13 +59,13 @@ h1 {
   transition: background 0.15s ease, transform 0.12s ease;
 }
 
-/* Hover feedback */
+/* Hover feedback FOR INDIVIDUAL CELLS IN TIC TAC TOE GRID - NOT NEEDED*/
 .cell:hover {
   background: #eae6f2;
   transform: translateY(-2px);
 }
 
-/* Status text */
+/* Status text (DISPLAYS STATUS -PLAYER 1 or PLAYER 2 NOT NEEDED */
 #status {
   text-align: center;
   font-size: 1.1rem;
@@ -73,7 +73,7 @@ h1 {
   margin: 0.5rem 0 1rem 0;
 }
 
-/* Restart button */
+/* Restart button NOT NEEDED?*/
 #reset {
   display: block;
   margin: 0 auto;
@@ -86,12 +86,13 @@ h1 {
   transition: background 0.2s ease;
 }
 
+/* NOT NEEDED? */
 #reset:hover {
   background: var(--accent);
   color: var(--primary);
 }
 
-/* Small screens */
+/* Small screens COULD BE USED IN MAIN */
 @media (max-width: 576px) {
   :root {
     --cell-size: 86px;
