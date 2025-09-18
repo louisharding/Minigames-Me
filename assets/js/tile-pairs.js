@@ -1,7 +1,6 @@
 /**this function creates the grid */ 
 const createGrid = function(rows, cols) {
-  // const pairsArray = getPairs(rows,cols)
-  // console.log(pairsArray)  // doesn't work yet
+  const pairsArray = createPairsArray(rows,cols)
   const container = document.getElementById('grid-container');
   container.innerHTML = "";
   // getPairs(rows, cols)
@@ -17,14 +16,17 @@ const createGrid = function(rows, cols) {
     const cell = document.createElement('div');
     cell.style.border = '1px solid #ccc';
     cell.style.background = '#f9f9f9';
-    cell.textContent = i + 1; // optional: cell number
+    //these two lines saved before changing, just in case
+    // cell.textContent = i + 1; // optional: cell number
+    // cell.id = i + 1;
+    cell.textContent = pairsArray[i]; 
     cell.id = i + 1;
     container.appendChild(cell);
   }
 }
 
 /**This function returns an array of the right number of pairs of numbers */
-const getPairs = function(rows, cols) {
+const createPairsArray = function(rows, cols) {
 
   // initial stuff
   const numOfCells = rows * cols
@@ -51,3 +53,5 @@ for (let i = 1; i <= highestNumber; i++) {
 }  
 return shuffle(pairsArray)
 }
+
+console.log(createPairsArray(4,4))
