@@ -4,13 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Minigames Me | Colour Flipper</title>
-        <link rel="stylesheet" href="assets/css/style.css" />
 
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
+      rel="stylesheet"
+    />  
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS Stylesheet(s) -->
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body>
     <!-- Insert navbar pulled from navbar.html -->
-    <div id="navbar"></div>
+    <!-- <div id="navbar"></div> -->
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="assets/images/arcadeimage.png"
+            alt="Minigames Logo"
+            class="logo-img"
+          />
+          <span class="ms-2">Minigames-Me</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <!-- Main -->
     <main class="game-container">
@@ -20,21 +69,22 @@
         Background colour:
         <span id="colour-text"> #000000 </span>
       </h2>
-      <button id="colour-btn">Click me!</button>
+
+      <button id="colour-btn">Click me!</button>  
     </main>
 
     <!-- SCRIPTS -->
-    <!-- Get the nabar HTML:
-         Fetch function asks the browser to get the navbar.html,
-         which then coverts the data to HTML text,
-         and inserts it into the element with the #navbar -->
-    <script>
-      fetch("navbar.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("navbar").innerHTML = data;
-      });
-    </script>    
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>       
     <script src="assets/js/colour-flipper.js"></script>
   </body>
 </html>

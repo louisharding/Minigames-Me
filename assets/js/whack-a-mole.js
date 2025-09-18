@@ -3,8 +3,8 @@ const gridSize = 9;
 
 // Let
 let score = 0;
-let moveMoleInterval = 2; // seconds = 2000 milliseconds
-let gameDuration = 16; // seconds = 30000 milliseconds
+let moveMoleInterval = 1.5; // seconds = 2000 milliseconds
+let gameDuration = 30; // seconds = 30000 milliseconds
 // let previousTile; // make sure that the mole always moves to a new tile
 let isGameActive = false;
 
