@@ -13,7 +13,10 @@
     <title>Rock Paper Scissors</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap 5 CSS -->
     <link
@@ -57,7 +60,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
             </li>
           </ul>
         </div>
@@ -65,40 +70,45 @@
     </nav>
 
     <main>
-      <h1>Rock Paper Scissors</h1>
+      <section id="game-container" class="container mt-5 p-3 rounded-5">
+        <h1 class="text-center">Rock Paper Scissors</h1>
 
-      <div class="score-board">
-        <div id="user-label" class="rps-badge">user</div>
-        <div id="computer-label" class="rps-badge">comp</div>
-        <span id="user-score">0</span>:<span id="computer-score">0</span>
-      </div>
-
-      <div class="result">
-        <p>Paper beats rock. You win!</p>
-      </div>
-
-      <div class="choices">
-        <div class="choice" id="choice-rock">
-          <img
-            src="https://placehold.co/80"
-            alt="Placeholder for rock image."
-          />
+        <div class="score-board">
+          <div id="user-label" class="rps-badge">YOU</div>
+          <div id="computer-label" class="rps-badge">AI</div>
+          <span id="user-score">0</span>:<span id="computer-score">0</span>
         </div>
-        <div class="choice" id="choice-paper">
-          <img
-            src="https://placehold.co/80"
-            alt="Placeholder for paper image."
-          />
-        </div>
-        <div class="choice" id="choice-scissors">
-          <img
-            src="https://placehold.co/80"
-            alt="Placeholder for scissors image."
-          />
-        </div>
-      </div>
 
-      <p id="action-message">Make your move...</p>
+        <div class="result">
+          <p>
+            Rock beats scissors. Scissors beats paper. Paper beats rock. Have
+            fun!
+          </p>
+        </div>
+
+        <div class="choices">
+          <div class="choice" id="choice-rock">
+            <img
+              src="https://placehold.co/80"
+              alt="Placeholder for rock image."
+            />
+          </div>
+          <div class="choice" id="choice-paper">
+            <img
+              src="https://placehold.co/80"
+              alt="Placeholder for paper image."
+            />
+          </div>
+          <div class="choice" id="choice-scissors">
+            <img
+              src="https://placehold.co/80"
+              alt="Placeholder for scissors image."
+            />
+          </div>
+        </div>
+
+        <p id="action-message">Make your move...</p>
+      </section>
     </main>
 
     <!-- Bootstrap JS -->
