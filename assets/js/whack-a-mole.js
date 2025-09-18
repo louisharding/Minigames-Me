@@ -4,7 +4,7 @@ const gridSize = 9;
 // Let
 let score = 0;
 let moveMoleInterval = 1.5; // seconds = 2000 milliseconds
-let gameDuration = 30; // seconds = 30000 milliseconds
+let gameDuration = 5; // seconds = 30000 milliseconds
 // let previousTile; // make sure that the mole always moves to a new tile
 let isGameActive = false;
 
@@ -13,6 +13,8 @@ let moleInterval = null;
 
 // Selectors
 const startBtn = document.getElementById("start-btn");
+const pauseBtn = document.getElementById("pause-btn");
+const retryBtn = document.getElementById("retry-btn");
 let scoreText = document.getElementById("score-text");
 let timeLeftText = document.getElementById("time-left");
 const gridTiles = document.querySelectorAll(".tile");
@@ -20,6 +22,8 @@ let gameOverMessageText = document.getElementById("game-over-message")
 
 // Event Listeners
 startBtn.addEventListener('click', startGame);
+// pauseBtn.addEventListener('click', pauseGame);
+retryBtn.addEventListener('click', retryGame);
 
 for (const tile of gridTiles) {
     tile.addEventListener("click", checkForMole);
@@ -38,6 +42,8 @@ function startGame() {
 }
 
 function startTimer (seconds, displayElement) {
+    retryBtn.disabled = false;
+
     let counter = seconds;
 
     timerLeftInterval = setInterval(() => {
@@ -48,11 +54,44 @@ function startTimer (seconds, displayElement) {
         {
             isGameActive = false;
             clearInterval(timerLeftInterval);
-            clearInterval(moleInterval)
+            clearInterval(moleInterval);
 
-            gameOverMessageText.innerText = `Times up! Your scored: ${score}!`;
+            // gameOverMessageText.innerText = `Times up! Your scored: ${score}!`;
+            gameOverMessageText.innerText = `Times up! You whacked the mole ${score} times!`;
+
+            retryBtn.disabled = false;
         }
     }, 1000); // milliseconds = 1 second    
+}
+
+// function pauseGame()
+// {
+//     if(timerLeftInterval !== null && moleInterval !== null)
+//     {
+//         timerLeftInterval.ste();
+//     }
+// }
+
+function retryGame()
+{
+    clearInterval(timerLeftInterval);   
+    clearInterval(moleInterval);
+
+    timerLeftInterval = null;
+    moleInterval = null;
+
+    retryBtn.disabled = true;
+    startBtn.disabled = false;
+
+    gameOverMessageText.innerText = "";
+
+    for (const tile of gridTiles) {
+        tile.classList.remove('mole');
+    }
+
+    console.log("click");
+
+
 }
 
 function moveMole() {

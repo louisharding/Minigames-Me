@@ -63,19 +63,29 @@
 
     <!-- Main -->
     <main class="game-container">
-        <h1>Whack-a-Mole</h1>
-
-        <button id="start-btn">Start</button>
-
-        <div id="timer">
-            <p>Time Left: <span id="time-left">0</span>s</p>
+        <div class="container">
+            <div class="row">
+                <div>
+                    <h1 class="text-center">Whack-a-Mole <i class="fa-solid fa-gavel fa-flip-horizontal"></i></h1>                    
+                </div>              
+                <div id="game-info">
+                    <div class="col-6">
+                        <button id="start-btn" class="ms-5 px-2">Start</button>    
+                        <!-- <button id="pause-btn" disabled>Pause</button> -->
+                        <button id="retry-btn" class="px-2" disabled>Retry</button>     
+                    </div>
+                    <div id="timer" class="col-3 px-2">
+                        <p>Time Left: <span id="time-left">0</span>s</p>
+                    </div>  
+                    <div class="col-3 me-5 px-2">
+                        <p>Score: <span id="score-text">0</span></p>                        
+                    </div>                     
+                </div>
+                <div class="text-center">
+                    <p id="game-over-message"></p>    
+                </div>             
+            </div>
         </div>
-
-        <div>
-            <p>Score: <span id="score-text">0</span></p>
-            <p id="game-over-message"></p>
-        </div>
-
         <div class="grid">
             <div id="tile-1" class="tile"></div>
             <div id="tile-2" class="tile"></div>
@@ -86,10 +96,13 @@
             <div id="tile-7" class="tile"></div>
             <div id="tile-8" class="tile"></div>
             <div id="tile-9" class="tile"></div>
-        </div>
+        </div> 
+        
     </main>
     
-
+    <!-- SCRIPTS -->     
     <script src="assets/js/whack-a-mole.js"></script>
+    <!-- FontAwesome Kit -->
+    <script src="https://kit.fontawesome.com/57fbd21ebd.js" crossorigin="anonymous"></script>
 </body>
 </html>
