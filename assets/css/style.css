@@ -3,6 +3,13 @@
   --main-font: "Orbitron", sans-serif;
   --main-bg: #f4f4f9;
   --main-text: #333;
+
+  /* Minigame specific*/
+  --wam-mole-bg: burlywood;
+  --wam-tile-bg: lightgreen;
+  --wam-tile-size: 200px;
+  --wam-grid-size: 612px;
+  --wam-border: 2px solid #222;
 }
 body {
   font-family: var(--main-font);
@@ -24,6 +31,55 @@ body {
   align-items: center;
 }
 
+/* Minigame specific styles*/
+
+/* Whack-a-mole */
+#wam-body{
+  background: var(--wam-mole-bg); 
+}
+.wam-grid {
+  width: var(--wam-grid-size);
+  height: var(--wam-grid-size);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.wam-tile {
+  background: var(--wam-tile-bg);
+  width: var(--wam-tile-size);
+  height: var(--wam-tile-size);
+  border: var(--wam-border);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.wam-tile:hover {
+  background: #b2ffb2;
+}
+
+.mole {
+  background-image: url(/assets/images/mole.webp);
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.mole:hover {
+  background-image: url(/assets/images/mole.webp);
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#wam-game-info {
+  display: flex;
+}
+
+/* Media queries */
 @media (max-width: 800px) {
   .game-container {
     max-width: 95vw;

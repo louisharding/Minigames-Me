@@ -3,8 +3,8 @@ const gridSize = 9;
 
 // Let
 let score = 0;
-let moveMoleInterval = 1.5; // seconds = 2000 milliseconds
-let gameDuration = 5; // seconds = 30000 milliseconds
+let moveMoleInterval = 1.2; // seconds = 2000 milliseconds
+let gameDuration = 30; // seconds = 30000 milliseconds
 // let previousTile; // make sure that the mole always moves to a new tile
 let isGameActive = false;
 
@@ -17,7 +17,7 @@ const pauseBtn = document.getElementById("pause-btn");
 const retryBtn = document.getElementById("retry-btn");
 let scoreText = document.getElementById("score-text");
 let timeLeftText = document.getElementById("time-left");
-const gridTiles = document.querySelectorAll(".tile");
+const gridTiles = document.querySelectorAll(".wam-tile");
 let gameOverMessageText = document.getElementById("game-over-message")
 
 // Event Listeners
@@ -88,6 +88,11 @@ function retryGame()
     for (const tile of gridTiles) {
         tile.classList.remove('mole');
     }
+
+    score = 0;
+    scoreText.innerText = "0";
+
+    timeLeftText.innerText = "0";
 
     console.log("click");
 
