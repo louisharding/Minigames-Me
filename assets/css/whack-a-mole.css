@@ -35,3 +35,10 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.mole:hover {
+    background-image: url(/assets/images/mole.webp);
+    background-size: 120px 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
