@@ -11,14 +11,19 @@
   --wam-grid-size: 612px;
   --wam-border: 2px solid #222;
 }
+
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: var(--main-font);
   background: linear-gradient(
-    to bottom,
     #f4f4f9 0%,
     #a1c4fd 50%,
     #c2e9fb 100%
   );
+  background-repeat: no-repeat;
   color: var(--main-text);
   margin: 0;
   padding: 0;
