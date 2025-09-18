@@ -3,10 +3,10 @@
   --main-font: "Orbitron", sans-serif;
   --main-bg: #f4f4f9;
   --main-text: #333;
-          --bg: #f4f4f9;
-        --purple: #4b3f72;
-        --accent: #00c9a7;
-        --text: #333;
+  --bg: #f4f4f9;
+  --purple: #4b3f72;
+  --accent: #00c9a7;
+  --text: #333;
 }
 
 /* 
@@ -69,14 +69,14 @@ body {
 /* Tic Tac Toe */
 
 /*Use these root variable to make a global style across the site*/
-/* :root {
+/* 
   --primary: #4b3f72;
   --accent: #00c9a7;
   --bg: #f4f4f9;
   --text: #333;
   --cell-size: 100px;
   --cell-radius: 8px;
-} */
+*/
 
 
 #game {
@@ -189,3 +189,55 @@ body {
 
 
 
+      /* Navbar */
+      .navbar {
+        background-color: var(--purple);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-bottom: 3px solid var(--accent);
+        padding: 0.5rem 0;
+      }
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--accent);
+        text-decoration: none;
+        text-transform: uppercase;
+        gap: 0.75rem;
+      }
+      .logo-img {
+        width: 64px;
+        height: 64px;
+        object-fit: contain;
+        border-radius: 10px;
+        border: 2px solid var(--accent);
+        display: block;
+      }
+      .navbar-nav .nav-link {
+        color: #222;
+        font-weight: 600;
+        padding: 0.4rem 0.9rem;
+        border-radius: 6px;
+        transition: background-color 0.25s ease, color 0.25s ease;
+      }
+      .navbar-nav .nav-link:hover {
+        background-color: var(--accent);
+        color: var(--purple);
+      }
+      .navbar-nav .nav-link.active {
+        background-color: var(--accent);
+        color: var(--purple);
+        font-weight: 700;
+      }
+      .navbar-toggler {
+        border: none;
+      }
+      .navbar-toggler-icon {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        background-image: url("/assets/images/navbar-toggler-icon.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
