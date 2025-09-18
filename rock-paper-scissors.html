@@ -25,9 +25,42 @@
   </head>
 
   <body>
-    <header></header>
+    <main>
+      <h1>Rock Paper Scissors</h1>
 
-    <main></main>
+      <div class="score-board">
+        <div id="user-label" class="rps-badge">user</div>
+        <div id="computer-label" class="rps-badge">comp</div>
+        <span id="user-score">0</span>:<span id="computer-score">0</span>
+      </div>
+
+      <div class="result">
+        <p>Paper beats rock. You win!</p>
+      </div>
+
+      <div class="choices">
+        <div class="choice" id="choice-rock">
+          <img
+            src="https://placehold.co/40"
+            alt="Placeholder for rock image."
+          />
+        </div>
+        <div class="choice" id="choice-paper">
+          <img
+            src="https://placehold.co/40"
+            alt="Placeholder for paper image."
+          />
+        </div>
+        <div class="choice" id="choice-scissors">
+          <img
+            src="https://placehold.co/40"
+            alt="Placeholder for scissors image."
+          />
+        </div>
+      </div>
+
+      <p id="action-message">Make your move</p>
+    </main>
 
     <!-- Bootstrap JS -->
     <script
