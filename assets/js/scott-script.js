@@ -56,11 +56,11 @@ const getPairs = function(rows, cols) {
 
 /**this function creates the grid */ 
 const createGrid = function(rows, cols) {
-  const pairsArray = getPairs(rows,cols)
+  // const pairsArray = getPairs(rows,cols)
   // console.log(pairsArray)  // doesn't work yet
   const container = document.getElementById('grid-container');
   container.innerHTML = "";
-  getPairs(rows, cols)
+  // getPairs(rows, cols)
 
   // Apply CSS grid styles
   container.style.display = 'grid';
