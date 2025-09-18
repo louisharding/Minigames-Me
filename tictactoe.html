@@ -3,22 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Play a classic Tic Tac Toe game. Simple, fun, and retro!"
-    />
+
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <title>Minigames Me | Tic Tac Toe</title>
+
     <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
       rel="stylesheet"
     />
-    <title>Tic Tac Toe</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS Stylesheet(s) -->
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/tictactoe.css" />
   </head>
   <body>
-  <main class="game-container">
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="assets/images/arcadeimage.png"
+            alt="Minigames Logo"
+            class="logo-img"
+          />
+          <span class="ms-2">Minigames-Me</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="game-container">
       <h1>Tic Tac Toe</h1>
 
+      <!-- Game board -->
       <div id="game">
         <div class="cell" data-index="0"></div>
         <div class="cell" data-index="1"></div>
@@ -31,10 +80,12 @@
         <div class="cell" data-index="8"></div>
       </div>
 
-      <p id="status"></p>
+      <!-- Status and controls -->
+      <p id="status">Player X's turn</p>
       <button id="reset">Restart</button>
-  </main>
+    </main>
 
+    <!-- Page JS -->
     <script src="assets/js/tictactoe.js"></script>
   </body>
 </html>
