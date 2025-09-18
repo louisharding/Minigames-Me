@@ -123,24 +123,8 @@ body {
 }
 
 /* Individual cells in TIC TAC TOE GRID -  */
-.cell {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 100px;
-  background: #fff;
-  border: 2px solid #4b3f72;
-  border-radius: 8px;
-  font-size: 2rem;
-  cursor: pointer;
-  transition: background 0.15s, transform 0.12s;
-}
-/* Hover feedback FOR INDIVIDUAL CELLS IN TIC TAC TOE GRID - NOT NEEDED*/
-.cell:hover {
-  background: #eae6f2;
-  transform: translateY(-2px);
-}
+
+
 /* Status text (DISPLAYS STATUS -PLAYER 1 or PLAYER 2 NOT NEEDED */
 #status {
   color: #4b3f72;
@@ -266,3 +250,30 @@ body {
         background-repeat: no-repeat;
       }
       /*End of Navbar */
+
+
+/* Homepage Styles */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.game-card-hyperlink {
+  border: 2px solid var(--purple);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(75, 63, 114, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem;
+  transition: transform 0.16s, box-shadow 0.16s;
+  text-align: center;
+}
+
+.game-card-hyperlink:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(75, 63, 114, 0.12);
+}

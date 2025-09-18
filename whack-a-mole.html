@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Minigames Me | Whack-a-mole</title>
-
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
     <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
       rel="stylesheet"
-    />    
-
+    />
     <!-- Bootstrap 5 CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -20,12 +17,11 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-
-    <!-- Custom CSS Stylesheet(s) -->
-    <link rel="stylesheet" href="assets/css/navbar.css">    
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body id="wam-body">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
     <!-- Navbar -->
     <nav id="navbar" class="navbar navbar-expand-lg">
       <div class="container">
@@ -37,7 +33,6 @@
           />
           <span class="ms-2">Minigames-Me</span>
         </a>
-
         <button
           class="navbar-toggler"
           type="button"
@@ -49,7 +44,6 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -59,49 +53,37 @@
         </div>
       </div>
     </nav>
-
     <!-- Main -->
     <main class="game-container">
-        <div class="container">
-            <div class="row">
-                <div>
-                    <h1 class="text-center">Whack-a-Mole <i class="fa-solid fa-gavel fa-flip-horizontal"></i></h1>                    
-                </div>              
-                <div id="game-info">
-                    <div class="col-6">
-                        <button id="start-btn" class="ms-5 px-2">Start</button>    
-                        <!-- <button id="pause-btn" disabled>Pause</button> -->
-                        <button id="retry-btn" class="px-2" disabled>Retry</button>     
-                    </div>
-                    <div id="timer" class="col-3 px-2">
-                        <p>Time Left: <span id="time-left">0</span>s</p>
-                    </div>  
-                    <div class="col-3 me-5 px-2">
-                        <p>Score: <span id="score-text">0</span></p>                        
-                    </div>                     
-                </div>
-                <div class="text-center">
-                    <p id="game-over-message"></p>    
-                </div>             
-            </div>
+      <h1 class="text-center">Whack-a-Mole <i class="fa-solid fa-gavel fa-flip-horizontal"></i></h1>
+      <div id="game-info" class="d-flex justify-content-between mb-3">
+        <div>
+          <button id="start-btn" class="ms-5 px-2">Start</button>
+          <button id="retry-btn" class="px-2" disabled>Retry</button>
         </div>
-        <div class="wam-grid">
-            <div id="tile-1" class="wam-tile"></div>
-            <div id="tile-2" class="wam-tile"></div>
-            <div id="tile-4" class="wam-tile"></div>
-            <div id="tile-4" class="wam-tile"></div>
-            <div id="tile-5" class="wam-tile"></div>
-            <div id="tile-6" class="wam-tile"></div>
-            <div id="tile-7" class="wam-tile"></div>
-            <div id="tile-8" class="wam-tile"></div>
-            <div id="tile-9" class="wam-tile"></div>
-        </div> 
-        
+        <div id="timer" class="px-2">
+          <p>Time Left: <span id="time-left">0</span>s</p>
+        </div>
+        <div class="px-2">
+          <p>Score: <span id="score-text">0</span></p>
+        </div>
+      </div>
+      <p id="game-over-message" class="text-center"></p>
+      <div class="wam-grid">
+        <div id="tile-1" class="wam-tile game-tile"></div>
+        <div id="tile-2" class="wam-tile game-tile"></div>
+        <div id="tile-3" class="wam-tile game-tile"></div>
+        <div id="tile-4" class="wam-tile game-tile"></div>
+        <div id="tile-5" class="wam-tile game-tile"></div>
+        <div id="tile-6" class="wam-tile game-tile"></div>
+        <div id="tile-7" class="wam-tile game-tile"></div>
+        <div id="tile-8" class="wam-tile game-tile"></div>
+        <div id="tile-9" class="wam-tile game-tile"></div>
+      </div>
     </main>
-    
-    <!-- SCRIPTS -->     
+    <!-- SCRIPTS -->
     <script src="assets/js/whack-a-mole.js"></script>
     <!-- FontAwesome Kit -->
     <script src="https://kit.fontawesome.com/57fbd21ebd.js" crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>
