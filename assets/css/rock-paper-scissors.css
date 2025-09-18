@@ -77,6 +77,11 @@ body {
   transition: all 0.2s ease;
 }
 
+.choice > img {
+  width: 80px;
+  height: 80px;
+}
+
 .choice:hover {
   cursor: pointer;
   background: #141519;
