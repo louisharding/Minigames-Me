@@ -22,28 +22,35 @@ body {
   padding: 0;
 }
 
-/*Reusable game container to be used for all games*/
+/* Reusable game container for all games */
 .game-container {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #751b1b;
+  border-radius: 16px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   margin: 3rem auto;
-  max-width: 700px;
+  max-width: 70vw;
+  width: 95vw;
   padding: 2rem;
+  box-sizing: border-box;
 }
 
-
+@media (max-width: 600px) {
+  .game-container {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+}
 /* Shared grid styles for all games */
 .game-grid {
   display: grid;
-  gap: 10px;
-  justify-content: center;
-  align-content: flex-start;
-  width: 612px;
-  height: 612px;
+  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 612px;
 }
 
 /* Generic Game Styles */
@@ -63,50 +70,26 @@ body {
 
 /* Generic tile for all games */
 .game-tile {
+  width: 100%;
+  aspect-ratio: 1/1;
+  min-width: 60px;
+  min-height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 2px solid #4b3f72;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.15s, transform 0.12s;
+  background: #eb56ff;
+  font-size: 2rem;
 }
 .game-tile:hover {
   filter: brightness(65%);
 }
 
-/* Tic-Tac-Toe specific tile */
-.cell.game-tile {
-  width: 100px;
-  height: 100px;
-  font-size: 2rem;
-  background: #fff;
-  border: 2px solid #4b3f72;
-}
-
-/* Whack-a-Mole specific tile */
-.wam-tile.game-tile {
-  width: 200px;
-  height: 200px;
-  background: lightgreen;
-  border: 2px solid #222;
-  box-sizing: border-box;
-  transition: background 0.2s;
-}
 
 /* Minigame specific styles*/
-
-/* Tic Tac Toe */
-
-/* This could be used as a generic tile style for other games such as whack a mole */
-#game {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
-  margin: 1rem auto 1.25rem auto;
-  max-width: 340px;
-  width: 100%;
-}
 
 @media (max-width: 400px) {
   #game {
@@ -122,8 +105,6 @@ body {
   }
 }
 
-/* Individual cells in TIC TAC TOE GRID -  */
-
 
 /* Status text (DISPLAYS STATUS -PLAYER 1 or PLAYER 2 NOT NEEDED */
 #status {
@@ -136,28 +117,21 @@ body {
 
 
 /* Whack-a-mole AKA wam */
-.wam-grid {
+/* .wam-grid {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
   width: 612px;
   height: 612px;
-}
+} */
 
 /*
  * This code defines a selection of functionality.
  * Please provide the actual code or context for more specific documentation.
  */
 .wam-tile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 200px;
   height: 200px;
-  background: lightgreen;
-  border: 2px solid #222;
-  box-sizing: border-box;
-  transition: background 0.2s;
 }
 
 /*
@@ -180,7 +154,7 @@ body {
   background-image: url(/assets/images/mole.webp);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 120px 120px;
+  background-size: 80%;
 }
 /*End of Mole */
 

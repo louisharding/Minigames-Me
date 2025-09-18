@@ -17,7 +17,7 @@ const pauseBtn = document.getElementById("pause-btn");
 const retryBtn = document.getElementById("retry-btn");
 let scoreText = document.getElementById("score-text");
 let timeLeftText = document.getElementById("time-left");
-const gridTiles = document.querySelectorAll(".wam-tile");
+const gridTiles = document.querySelectorAll(".game-tile");
 let gameOverMessageText = document.getElementById("game-over-message")
 
 // Event Listeners
