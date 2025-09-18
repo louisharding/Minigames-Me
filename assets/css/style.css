@@ -45,6 +45,7 @@ body {
   align-items: center;
 }
 
+
 /* Generic Game Styles */
 /* 
     Styles for the game information section.
@@ -56,12 +57,67 @@ body {
 }
 
 
-
+#reset:hover {
+  background: #00c9a7;
+  color: #4b3f72;
+}
 
 
 
 
 /* Minigame specific styles*/
+
+/* Tic Tac Toe */
+
+/*Use these root variable to make a global style across the site*/
+/* :root {
+  --primary: #4b3f72;
+  --accent: #00c9a7;
+  --bg: #f4f4f9;
+  --text: #333;
+  --cell-size: 100px;
+  --cell-radius: 8px;
+} */
+
+
+#game {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin: 1rem auto 1.25rem auto;
+}
+
+
+/* Individual cells in TIC TAC TOE GRID -  */
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border: 2px solid #4b3f72;
+  border-radius: 8px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.12s ease;
+}
+
+/* Hover feedback FOR INDIVIDUAL CELLS IN TIC TAC TOE GRID - NOT NEEDED*/
+.cell:hover {
+  background: #eae6f2;
+  transform: translateY(-2px);
+}
+
+/* Status text (DISPLAYS STATUS -PLAYER 1 or PLAYER 2 NOT NEEDED */
+#status {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #4b3f72;
+  margin: 0.5rem 0 1rem 0;
+}
+
 
 /* Whack-a-mole AKA wam */
 .wam-grid {
