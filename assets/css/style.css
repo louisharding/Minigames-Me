@@ -13,7 +13,12 @@
 }
 body {
   font-family: var(--main-font);
-  background: var(--main-bg);
+  background: linear-gradient(
+    to bottom,
+    #f4f4f9 0%,
+    #a1c4fd 50%,
+    #c2e9fb 100%
+  );
   color: var(--main-text);
   margin: 0;
   padding: 0;
@@ -87,3 +92,6 @@ body {
     margin: 2rem auto;
   }
 }
+
+
+/*Background for all pages*/
