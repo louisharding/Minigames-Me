@@ -1,22 +1,17 @@
-/* Navbar Styles - Optimized */
-:root {
-  --navbar-bg: #4b3f72;
-  --navbar-accent: #00c9a7;
-  --navbar-text: #fff;
-  --navbar-radius: 6px;
-}
-
+/* Apply retro-futuristic font to entire page */
 body {
   font-family: "Orbitron", sans-serif;
-  background: #f4f4f9;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
   color: #333;
 }
 
 /* Navbar container */
 #navbar {
-  background: var(--navbar-bg);
+  background-color: #4b3f72; /* Soft retro purple */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-bottom: 3px solid var(--navbar-accent);
+  border-bottom: 3px solid #00c9a7; /* Aqua accent */
 }
 
 /* Brand logo and text */
@@ -25,7 +20,7 @@ body {
   align-items: center;
   font-size: 1.2rem;
   font-weight: bold;
-  color: var(--navbar-accent);
+  color: #00c9a7;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -36,21 +31,25 @@ body {
   object-fit: contain;
   margin-right: 12px;
   border-radius: 10px;
-  border: 2px solid var(--navbar-accent);
+  border: 2px solid #00c9a7;
 }
 
 /* Nav links */
 .navbar-nav .nav-link {
-  color: var(--navbar-text);
+  color: #ffffff;
   font-weight: 600;
   padding: 0.5rem 1rem;
-  border-radius: var(--navbar-radius);
-  transition: background 0.3s, color 0.3s;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:hover {
+  background-color: #00c9a7;
+  color: #4b3f72;
+}
+
 .navbar-nav .nav-link.active {
-  background: var(--navbar-accent);
-  color: var(--navbar-bg);
+  background-color: #00c9a7;
+  color: #4b3f72;
   font-weight: bold;
 }
