@@ -1,11 +1,19 @@
 /* Whack-a-Mole Styles - Optimized */
 :root {
+  --mole-bg: burlywood; /* CAN DELETE & USE GENERIC */
+
+  
   --tile-bg: lightgreen; /* KEEP for colour */
+  --tile-size: 200px; /* CAN DELETE & USE GENERIC */
   --grid-size: 612px; /* CAN CHANGE is tile&border size is changed */
   --border: 2px solid #222; /* CAN CHANGE if there is generic */
 }
 
-
+/* CAN DELETE 
+ - IN style.css = #wam-body CAN DELETE to use body style already in there*/
+body {
+  background: var(--mole-bg);
+}
 
 /* KEEP for sizing*/
 .wam-grid {
@@ -26,6 +34,10 @@
   align-items: center;
   justify-content: center;
   transition: background 0.2s;
+}
+
+.wam-tile:hover {
+  background: #b2ffb2;
 }
 
 /* KEEP */
