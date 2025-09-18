@@ -1,14 +1,21 @@
 /* Whack-a-Mole Styles - Optimized */
 :root {
-  --mole-bg: burlywood;
-  --tile-bg: lightgreen;
-  --tile-size: 200px;
-  --grid-size: 612px;
-  --border: 2px solid #222;
+  --mole-bg: burlywood; /* CAN DELETE & USE GENERIC */
+
+  
+  --tile-bg: lightgreen; /* KEEP for colour */
+  --tile-size: 200px; /* CAN DELETE & USE GENERIC */
+  --grid-size: 612px; /* CAN CHANGE is tile&border size is changed */
+  --border: 2px solid #222; /* CAN CHANGE if there is generic */
 }
+
+/* CAN DELETE 
+ - IN style.css = #wam-body CAN DELETE to use body style already in there*/
 body {
   background: var(--mole-bg);
 }
+
+/* KEEP for sizing*/
 .wam-grid {
   width: var(--grid-size);
   height: var(--grid-size);
@@ -16,6 +23,7 @@ body {
   flex-wrap: wrap;
   align-content: flex-start;
 }
+ /* KEEP for sizing */
 .wam-tile {
   background: var(--tile-bg);
   width: var(--tile-size);
@@ -27,10 +35,12 @@ body {
   justify-content: center;
   transition: background 0.2s;
 }
+
 .wam-tile:hover {
   background: #b2ffb2;
 }
 
+/* KEEP */
 .mole {
   background-image: url(/assets/images/mole.webp);
   background-size: 120px 120px;
@@ -38,6 +48,7 @@ body {
   background-position: center;
 }
 
+/* KEEP */
 .mole:hover {
     background-image: url(/assets/images/mole.webp);
     background-size: 120px 120px;
@@ -45,6 +56,7 @@ body {
     background-position: center;
 }
 
+/* KEEP for flex display on game info & buttons*/
 #wam-game-info {
     display:flex;
 }
