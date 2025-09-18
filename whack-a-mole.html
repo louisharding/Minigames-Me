@@ -23,10 +23,9 @@
 
     <!-- Custom CSS Stylesheet(s) -->
     <link rel="stylesheet" href="assets/css/navbar.css">    
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/whack-a-mole.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body id="wam-body">
     <!-- Navbar -->
     <nav id="navbar" class="navbar navbar-expand-lg">
       <div class="container">
@@ -63,33 +62,46 @@
 
     <!-- Main -->
     <main class="game-container">
-        <h1>Whack-a-Mole</h1>
-
-        <button id="start-btn">Start</button>
-
-        <div id="timer">
-            <p>Time Left: <span id="time-left">0</span>s</p>
+        <div class="container">
+            <div class="row">
+                <div>
+                    <h1 class="text-center">Whack-a-Mole <i class="fa-solid fa-gavel fa-flip-horizontal"></i></h1>                    
+                </div>              
+                <div id="wam-game-info">
+                    <div class="col-6">
+                        <button id="start-btn" class="ms-5 px-2">Start</button>    
+                        <!-- <button id="pause-btn" disabled>Pause</button> -->
+                        <button id="retry-btn" class="px-2" disabled>Retry</button>     
+                    </div>
+                    <div id="timer" class="col-3 px-2">
+                        <p>Time Left: <span id="time-left">0</span>s</p>
+                    </div>  
+                    <div class="col-3 me-5 px-2">
+                        <p>Score: <span id="score-text">0</span></p>                        
+                    </div>                     
+                </div>
+                <div class="text-center">
+                    <p id="game-over-message"></p>    
+                </div>             
+            </div>
         </div>
-
-        <div>
-            <p>Score: <span id="score-text">0</span></p>
-            <p id="game-over-message"></p>
-        </div>
-
-        <div class="grid">
-            <div id="tile-1" class="tile"></div>
-            <div id="tile-2" class="tile"></div>
-            <div id="tile-4" class="tile"></div>
-            <div id="tile-4" class="tile"></div>
-            <div id="tile-5" class="tile"></div>
-            <div id="tile-6" class="tile"></div>
-            <div id="tile-7" class="tile"></div>
-            <div id="tile-8" class="tile"></div>
-            <div id="tile-9" class="tile"></div>
-        </div>
+        <div class="wam-grid">
+            <div id="tile-1" class="wam-tile"></div>
+            <div id="tile-2" class="wam-tile"></div>
+            <div id="tile-4" class="wam-tile"></div>
+            <div id="tile-4" class="wam-tile"></div>
+            <div id="tile-5" class="wam-tile"></div>
+            <div id="tile-6" class="wam-tile"></div>
+            <div id="tile-7" class="wam-tile"></div>
+            <div id="tile-8" class="wam-tile"></div>
+            <div id="tile-9" class="wam-tile"></div>
+        </div> 
+        
     </main>
     
-
+    <!-- SCRIPTS -->     
     <script src="assets/js/whack-a-mole.js"></script>
+    <!-- FontAwesome Kit -->
+    <script src="https://kit.fontawesome.com/57fbd21ebd.js" crossorigin="anonymous"></script>
 </body>
 </html>
