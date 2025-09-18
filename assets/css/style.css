@@ -1,0 +1,32 @@
+/* Shared Styles - Optimized */
+:root {
+  --main-font: "Orbitron", sans-serif;
+  --main-bg: #f4f4f9;
+  --main-text: #333;
+}
+body {
+  font-family: var(--main-font);
+  background: var(--main-bg);
+  color: var(--main-text);
+  margin: 0;
+  padding: 0;
+}
+
+.game-container {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .game-container {
+    max-width: 95vw;
+    padding: 1rem;
+  }
+}

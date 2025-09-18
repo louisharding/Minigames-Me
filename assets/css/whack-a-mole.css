@@ -1,25 +1,37 @@
+/* Whack-a-Mole Styles - Optimized */
+:root {
+  --mole-bg: burlywood;
+  --tile-bg: lightgreen;
+  --tile-size: 200px;
+  --grid-size: 612px;
+  --border: 2px solid #222;
+}
 body {
-    background-color: burlywood;
+  background: var(--mole-bg);
 }
-
 .grid {
-    width: 612px;
-    height: 612px;
-    display: flex;
-    flex-wrap: wrap;
+  width: var(--grid-size);
+  height: var(--grid-size);
+  display: flex;
+  flex-wrap: wrap;
 }
-
 .tile {
-    background-color: lightgreen;
-    width: 200px;
-    height: 200px;
-    border: solid 2px black;
+  background: var(--tile-bg);
+  width: var(--tile-size);
+  height: var(--tile-size);
+  border: var(--border);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
 }
-
-/** The mole that appears on the tiles **/
+.tile:hover {
+  background: #b2ffb2;
+}
 .mole {
-    background-image: url(/assets/images/mole.webp);
-    background-size: 120px 120px;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-image: url(/assets/images/mole.webp);
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
