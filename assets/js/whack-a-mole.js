@@ -4,7 +4,7 @@ const gridSize = 9;
 // Let
 let score = 0;
 let moveMoleInterval = 2; // seconds = 2000 milliseconds
-let gameDuration = 15; // seconds = 30000 milliseconds
+let gameDuration = 16; // seconds = 30000 milliseconds
 // let previousTile; // make sure that the mole always moves to a new tile
 let isGameActive = false;
 
@@ -31,6 +31,8 @@ function startGame() {
     isGameActive = true;
     console.log("Game Started");
     startBtn.disabled = true;
+    //add mole imediately
+    // getRandomTile();
     startTimer(gameDuration, timeLeftText);
     moveMole();    
 }
