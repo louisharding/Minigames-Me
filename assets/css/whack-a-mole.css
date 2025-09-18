@@ -9,13 +9,14 @@
 body {
   background: var(--mole-bg);
 }
-.grid {
+.wam-grid {
   width: var(--grid-size);
   height: var(--grid-size);
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
 }
-.tile {
+.wam-tile {
   background: var(--tile-bg);
   width: var(--tile-size);
   height: var(--tile-size);
@@ -26,9 +27,10 @@ body {
   justify-content: center;
   transition: background 0.2s;
 }
-.tile:hover {
+.wam-tile:hover {
   background: #b2ffb2;
 }
+
 .mole {
   background-image: url(/assets/images/mole.webp);
   background-size: 120px 120px;
@@ -41,4 +43,8 @@ body {
     background-size: 120px 120px;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+#wam-game-info {
+    display:flex;
 }
