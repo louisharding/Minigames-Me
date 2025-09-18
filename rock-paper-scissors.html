@@ -69,43 +69,44 @@
       </div>
     </nav>
 
-    <main>
-      <section id="game-container" class="container mt-5 p-3 rounded-5">
-        <h1 id="game-title" class="text-center">Rock Paper Scissors</h1>
+    <main class="game-container">
+      <h1 id="game-title" class="text-center">Rock Paper Scissors</h1>
 
-        <div class="score-board">
-          <div id="user-label" class="rps-badge">YOU</div>
-          <div id="computer-label" class="rps-badge">AI</div>
-          <span id="user-score">0</span>:<span id="computer-score">0</span>
+      <div class="score-board">
+        <div id="user-label" class="rps-badge">YOU</div>
+        <div id="computer-label" class="rps-badge">AI</div>
+        <span id="user-score">0</span>:<span id="computer-score">0</span>
+      </div>
+
+      <div class="result">
+        <p>Have fun!</p>
+      </div>
+
+      <div class="choices">
+        <div class="choice" id="choice-rock">
+          <img
+            class="rps-icon"
+            src="assets/images/rock.webp"
+            alt="Placeholder for rock image."
+          />
         </div>
-
-        <div class="result">
-          <p>Have fun!</p>
+        <div class="choice" id="choice-paper">
+          <img
+            class="rps-icon"
+            src="assets/images/paper.webp"
+            alt="Placeholder for paper image."
+          />
         </div>
-
-        <div class="choices">
-          <div class="choice" id="choice-rock">
-            <img
-              src="assets/images/rock.webp"
-              alt="Placeholder for rock image."
-            />
-          </div>
-          <div class="choice" id="choice-paper">
-            <img
-              src="assets/images/paper.webp"
-              alt="Placeholder for paper image."
-            />
-          </div>
-          <div class="choice" id="choice-scissors">
-            <img
-              src="assets/images/scissors.webp"
-              alt="Placeholder for scissors image."
-            />
-          </div>
+        <div class="choice" id="choice-scissors">
+          <img
+            class="rps-icon"
+            src="assets/images/scissors.webp"
+            alt="Placeholder for scissors image."
+          />
         </div>
+      </div>
 
-        <p id="action-message">Make your move...</p>
-      </section>
+      <p id="action-message">Make your move.</p>
     </main>
 
     <!-- Bootstrap JS -->
