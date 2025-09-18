@@ -70,40 +70,42 @@
     </nav>
 
     <main>
-      <h1>Rock Paper Scissors</h1>
+      <section id="game-container" class="container mt-5 p-3 rounded-5">
+        <h1 id="game-title" class="text-center">Rock Paper Scissors</h1>
 
-      <div class="score-board">
-        <div id="user-label" class="rps-badge">user</div>
-        <div id="computer-label" class="rps-badge">comp</div>
-        <span id="user-score">0</span>:<span id="computer-score">0</span>
-      </div>
-
-      <div class="result">
-        <p>Paper beats rock. You win!</p>
-      </div>
-
-      <div class="choices">
-        <div class="choice" id="choice-rock">
-          <img
-            src="https://placehold.co/80"
-            alt="Placeholder for rock image."
-          />
+        <div class="score-board">
+          <div id="user-label" class="rps-badge">YOU</div>
+          <div id="computer-label" class="rps-badge">AI</div>
+          <span id="user-score">0</span>:<span id="computer-score">0</span>
         </div>
-        <div class="choice" id="choice-paper">
-          <img
-            src="https://placehold.co/80"
-            alt="Placeholder for paper image."
-          />
-        </div>
-        <div class="choice" id="choice-scissors">
-          <img
-            src="https://placehold.co/80"
-            alt="Placeholder for scissors image."
-          />
-        </div>
-      </div>
 
-      <p id="action-message">Make your move...</p>
+        <div class="result">
+          <p>Have fun!</p>
+        </div>
+
+        <div class="choices">
+          <div class="choice" id="choice-rock">
+            <img
+              src="assets/images/rock.webp"
+              alt="Placeholder for rock image."
+            />
+          </div>
+          <div class="choice" id="choice-paper">
+            <img
+              src="assets/images/paper.webp"
+              alt="Placeholder for paper image."
+            />
+          </div>
+          <div class="choice" id="choice-scissors">
+            <img
+              src="assets/images/scissors.webp"
+              alt="Placeholder for scissors image."
+            />
+          </div>
+        </div>
+
+        <p id="action-message">Make your move...</p>
+      </section>
     </main>
 
     <!-- Bootstrap JS -->
@@ -117,5 +119,8 @@
       integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/rock-paper-scissors.js"></script>
   </body>
 </html>

@@ -1,74 +1,96 @@
+/* Page styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #292c34;
-    color: white;
+  background-color: #292c34;
+  color: white;
 }
 
+/* Game */
+#game-container {
+  background-color: #363a45;
+}
+
+#game-title {
+  color: #e2584d;
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+/* Score board */
 .score-board {
-    border: 3px solid white;
-    border-radius: 4px;
-    text-align: center;
-    font-size: 46px;
-    width: 200px;
-    margin: 20px auto;
-    padding: 15px 15px;
-    position: relative;
+  border: 3px solid white;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 46px;
+  width: 200px;
+  margin: 20px auto;
+  padding: 15px 15px;
+  position: relative;
 }
 
 .rps-badge {
-    background: #e2584d;
-    font-size: 14px;
-    padding: 2px 10px;
+  background: #e2584d;
+  font-size: 14px;
+  padding: 2px 10px;
 }
 
 #user-label {
-    position: absolute;
-    top: 30px;
-    left: -25px;
+  position: absolute;
+  top: 35px;
+  left: -25px;
 }
 
 #computer-label {
-    position: absolute;
-    top: 30px;
-    right: -30px;
+  position: absolute;
+  top: 35px;
+  right: -20px;
 }
 
+/* Result message */
 .result {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .result > p {
-    text-align: center;
-    font-weight: bold;
+  text-align: center;
+  font-weight: semi-bold;
 }
 
+/* Choices */
 .choices {
-    margin-top: 50px;
-    text-align: center;
+  margin-top: 50px;
+  text-align: center;
 }
 
 .choice {
-    display: inline-block;
-    border: 4px solid white;
-    border-radius: 50%;
-    padding: 10px;
-    margin: 0 20px;
-    transition: all 0.2s ease;
+  display: inline-block;
+  border: 4px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 20px;
+  transition: all 0.2s ease;
+}
+
+.choice > img {
+  width: 80px;
+  height: 80px;
 }
 
 .choice:hover {
-    cursor: pointer;
-    background: #141519
+  cursor: pointer;
+  background: #141519;
 }
 
+/* Action message */
 #action-message {
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
 }

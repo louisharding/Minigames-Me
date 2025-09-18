@@ -2,7 +2,7 @@
 
 Minigames-Me is a multipage website featuring in-browser playable games.
 
-The website is designed with simplicity and access as a main focus, demonstrating frontend skills including bootstrap. 
+The website is designed with simplicity and access as a main focus, demonstrating frontend skills including bootstrap.
 
 ## Features
 
@@ -11,8 +11,8 @@ The website is designed with simplicity and access as a main focus, demonstratin
 - Responsive design
 - Accessible design
 
-
 ## Authors
+
 - [@Khizermalik1](https://github.com/khizermalik1)
 
 - [@KoroYsabela](https://github.com/KoroYsabela)
@@ -23,5 +23,6 @@ The website is designed with simplicity and access as a main focus, demonstratin
 
 - [@louisharding](https://github.com/louisharding)
 
+## Credits
 
-
+ChatGPT generated the icons for the Rock Paper Scissors game.
