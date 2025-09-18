@@ -9,44 +9,42 @@
   --text: #333;
 }
 
-/* 
-    Styles applied to both the <html> and <body> elements.
-    Useful for setting global layout, sizing, or font properties.
-*/
 html, body {
   height: 100%;
 }
 
-/* 
-    Styles for the <body> element.
-    This section typically defines the overall layout, background, font, and base styles
-    that apply to the entire webpage.
-*/
 body {
   font-family: var(--main-font);
-  background: linear-gradient(
-    #f4f4f9 0%,
-    #a1c4fd 50%,
-    #c2e9fb 100%
-  );
+  background: linear-gradient(#f4f4f9 0%, #a1c4fd 50%, #c2e9fb 100%);
   background-repeat: no-repeat;
   color: var(--main-text);
   margin: 0;
   padding: 0;
 }
+
 /*Reusable game container to be used for all games*/
 .game-container {
-  max-width: 700px;
-  margin: 3rem auto;
-  padding: 2rem;
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 3rem auto;
+  max-width: 700px;
+  padding: 2rem;
 }
 
+
+/* Shared grid styles for all games */
+.game-grid {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  align-content: flex-start;
+  width: 612px;
+  height: 612px;
+}
 
 /* Generic Game Styles */
 /* 
@@ -58,73 +56,108 @@ body {
   display: flex;
 }
 
-
 #reset:hover {
   background: #00c9a7;
   color: #4b3f72;
+}
+
+/* Generic tile for all games */
+.game-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.12s;
+}
+.game-tile:hover {
+  filter: brightness(65%);
+}
+
+/* Tic-Tac-Toe specific tile */
+.cell.game-tile {
+  width: 100px;
+  height: 100px;
+  font-size: 2rem;
+  background: #fff;
+  border: 2px solid #4b3f72;
+}
+
+/* Whack-a-Mole specific tile */
+.wam-tile.game-tile {
+  width: 200px;
+  height: 200px;
+  background: lightgreen;
+  border: 2px solid #222;
+  box-sizing: border-box;
+  transition: background 0.2s;
 }
 
 /* Minigame specific styles*/
 
 /* Tic Tac Toe */
 
-/*Use these root variable to make a global style across the site*/
-/* 
-  --primary: #4b3f72;
-  --accent: #00c9a7;
-  --bg: #f4f4f9;
-  --text: #333;
-  --cell-size: 100px;
-  --cell-radius: 8px;
-*/
-
-
+/* This could be used as a generic tile style for other games such as whack a mole */
 #game {
   display: grid;
-  grid-template-columns: repeat(3, 100px);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 10px;
-  justify-content: center;
   margin: 1rem auto 1.25rem auto;
+  max-width: 340px;
+  width: 100%;
 }
 
+@media (max-width: 400px) {
+  #game {
+    gap: 6px;
+    max-width: 98vw;
+  }
+  .cell {
+    font-size: 1.3rem;
+    width: 28vw;
+    height: 28vw;
+    min-width: 60px;
+    min-height: 60px;
+  }
+}
 
 /* Individual cells in TIC TAC TOE GRID -  */
 .cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100px;
   height: 100px;
   background: #fff;
   border: 2px solid #4b3f72;
   border-radius: 8px;
   font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
-  transition: background 0.15s ease, transform 0.12s ease;
+  transition: background 0.15s, transform 0.12s;
 }
-
 /* Hover feedback FOR INDIVIDUAL CELLS IN TIC TAC TOE GRID - NOT NEEDED*/
 .cell:hover {
   background: #eae6f2;
   transform: translateY(-2px);
 }
-
 /* Status text (DISPLAYS STATUS -PLAYER 1 or PLAYER 2 NOT NEEDED */
 #status {
-  text-align: center;
-  font-size: 1.1rem;
   color: #4b3f72;
-  margin: 0.5rem 0 1rem 0;
+  font-size: 1.1rem;
+  margin: 0.5rem 0 1rem;
+  text-align: center;
 }
+/* End of Tic Tac Toe */
 
 
 /* Whack-a-mole AKA wam */
 .wam-grid {
-  width: 612px;
-  height: 612px;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
+  width: 612px;
+  height: 612px;
 }
 
 /*
@@ -132,17 +165,16 @@ body {
  * Please provide the actual code or context for more specific documentation.
  */
 .wam-tile {
-  background: lightgreen;
-  width: 200px;
-  height: 200px;
-  border: 2px solid #222;
-  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 200px;
+  height: 200px;
+  background: lightgreen;
+  border: 2px solid #222;
+  box-sizing: border-box;
   transition: background 0.2s;
 }
-
 
 /*
  * This code defines a functionality based on the user's selection.
@@ -160,23 +192,14 @@ body {
     Typically used to represent a mole in a whack-a-mole game.
     Add visual properties, positioning, and animations as needed.
 */
-.mole {
+.mole, .mole:hover {
   background-image: url(/assets/images/mole.webp);
-  background-size: 120px 120px;
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: 120px 120px;
 }
+/*End of Mole */
 
-/* 
- * Applies styles to the .mole element when hovered by the user.
- * Typically used to provide visual feedback or interactivity for game elements.
- */
-.mole:hover {
-  background-image: url(/assets/images/mole.webp);
-  background-size: 120px 120px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
 /* Media queries */
 @media (max-width: 800px) {
@@ -189,55 +212,57 @@ body {
 
 
 
-      /* Navbar */
+      /* 
+        The .navbar class styles the navigation bar of the website.
+        It typically contains layout, color, spacing, and positioning rules
+        to ensure consistent appearance and usability across pages.
+      */
       .navbar {
         background-color: var(--purple);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         border-bottom: 3px solid var(--accent);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         padding: 0.5rem 0;
       }
       .navbar-brand {
         display: flex;
         align-items: center;
+        gap: 0.75rem;
         font-size: 1.1rem;
         font-weight: 700;
         color: var(--accent);
         text-decoration: none;
         text-transform: uppercase;
-        gap: 0.75rem;
       }
       .logo-img {
+        display: block;
         width: 64px;
         height: 64px;
         object-fit: contain;
         border-radius: 10px;
         border: 2px solid var(--accent);
-        display: block;
       }
-      .navbar-nav .nav-link {
+      .navbar-nav .nav-link,
+      .navbar-nav .nav-link.active {
+        border-radius: 6px;
         color: #222;
         font-weight: 600;
         padding: 0.4rem 0.9rem;
-        border-radius: 6px;
-        transition: background-color 0.25s ease, color 0.25s ease;
+        transition: background-color 0.25s, color 0.25s;
       }
-      .navbar-nav .nav-link:hover {
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link.active:hover {
         background-color: var(--accent);
         color: var(--purple);
-      }
-      .navbar-nav .nav-link.active {
-        background-color: var(--accent);
-        color: var(--purple);
-        font-weight: 700;
       }
       .navbar-toggler {
         border: none;
       }
       .navbar-toggler-icon {
+        display: inline-block;
         width: 30px;
         height: 30px;
-        display: inline-block;
         background-image: url("/assets/images/navbar-toggler-icon.svg");
         background-size: contain;
         background-repeat: no-repeat;
       }
+      /*End of Navbar */
