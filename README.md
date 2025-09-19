@@ -14,12 +14,69 @@ The website is designed with simplicity and access as a main focus, demonstratin
 ## Design and Planning:
 ### Typography
 (Fonts used)
+
 ### Colour Scheme
 (Color scheme of site)
+
 ### Images and Icons
-(Maybe some samples of images used e.g. mole images was generated from chatgpt)
+
+##### Whack-a-mole:
+The mole image used in whack-a-mole was generated with the help of chatgpt.
+![Google chrome lighthouse performance](assets/images/mole.webp)
+
 ## Development
 (Include development on site show code and explain reasons for doing/changing etc)
+
+### Whack-a-mole
+##### HTML:
+The minigame was added into a main ```class="game-container"``` which was used across the site, this ensured reusability and made sure the games have similar styles and layouts to make the user experience uniform.
+
+![HTML image of main section of whack-a-mole minigame](assets/images/readme/wam-html.png)
+
+##### Styling:
+Originally this had a seperate css file that included root variables:
+```
+:root {
+  --mole-bg: burlywood;
+  --tile-bg: lightgreen;
+  --tile-size: 200px;
+  --grid-size: 612px;
+  --border: 2px solid #222; 
+```
+which were applied across a whack-a-mole.css file. However it was removed as the variables were not used often and was merged into style.css file.
+
+##### JavaScript:
+The main functionality of the minigame is shown in this code snippet:
+```
+// Set an interval to move the mole every x seconds
+function moveMole() {
+    // Make sure the game is active before moving the mole
+    if (isGameActive) {
+        moleInterval = setInterval(getRandomTile, convertToMilliseconds(moveMoleInterval));
+    }
+}
+
+// Loop through grids with class "tile", 
+// pick a random tile for the mole css class to be added
+function getRandomTile() {
+    const chosenTile = getRandomNumber(gridSize);
+
+    // Remove any existing mole class in tiles
+    for (const tile of gridTiles) {
+        tile.classList.remove('mole');
+    }
+    gridTiles[chosenTile].classList.add('mole');
+}
+```
+The snippet shows a ```.mole``` class being added and removed. The class in the css file includes a background image of the mole:
+
+```background-image: url(../images/mole.webp``` 
+
+This was created as it was the easiest way to make the mole appear and disappear for the minigame.
+
+The idea for having a mole class being added and removed was taked from this  
+[video.](https://www.youtube.com/watch?v=lhNdUVh3qCc)
+
 
 ## Testing
 (INSERT VALIDATION FOR EACH PAGE AND FILE)
@@ -96,4 +153,7 @@ View the deployed site [here.](https://louisharding.github.io/Minigames-Me/)
 ## Credits
 
 ChatGPT generated the icons for the Rock Paper Scissors game.
+
+##### Colour Flipper:
+The small minigame was created with the help of this [video.](https://www.youtube.com/watch?v=3PHXvlpOkf4&t=421s)
 
