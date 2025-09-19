@@ -12,12 +12,15 @@ The website is designed with simplicity and access as a main focus, demonstratin
 - Accessible design
 
 ## Design and Planning:
+
 ### Typography
+
 This font was chosen for a sci-fi / futuristic / space theme.
 
 ![Google fonts - Orbitron font](assets/images/readme/orbitron-font.png)
 
 ### Colour Scheme
+
 Colour palette pulled from the finished website.
 
 ![Google fonts - Orbitron font](assets/images/readme/minigames-me-colour-palette.png)
@@ -25,31 +28,40 @@ Colour palette pulled from the finished website.
 ### Images and Icons
 
 ##### Whack-a-mole:
+
 The mole image used in whack-a-mole was generated with the help of chatgpt.
 
 ![Google chrome lighthouse performance](assets/images/mole.webp)
 
 ## Development
+
 ### Whack-a-mole
+
 ##### HTML:
-The minigame was added into a main ```class="game-container"``` which was used across the site, this ensured reusability and made sure the games have similar styles and layouts to make the user experience uniform.
+
+The minigame was added into a main `class="game-container"` which was used across the site, this ensured reusability and made sure the games have similar styles and layouts to make the user experience uniform.
 
 ![HTML image of main section of whack-a-mole minigame](assets/images/readme/wam-html.png)
 
 ##### Styling:
+
 Originally this had a seperate css file that included root variables:
+
 ```
 :root {
   --mole-bg: burlywood;
   --tile-bg: lightgreen;
   --tile-size: 200px;
   --grid-size: 612px;
-  --border: 2px solid #222; 
+  --border: 2px solid #222;
 ```
+
 which were applied across a whack-a-mole.css file. However it was removed as the variables were not used often and the file was merged into the main style.css file.
 
 ##### JavaScript:
+
 The main functionality of the minigame is shown in this code snippet:
+
 ```
 // Set an interval to move the mole every x seconds
 function moveMole() {
@@ -59,7 +71,7 @@ function moveMole() {
     }
 }
 
-// Loop through grids with class "tile", 
+// Loop through grids with class "tile",
 // pick a random tile for the mole css class to be added
 function getRandomTile() {
     const chosenTile = getRandomNumber(gridSize);
@@ -71,9 +83,10 @@ function getRandomTile() {
     gridTiles[chosenTile].classList.add('mole');
 }
 ```
-The snippet shows a ```.mole``` class being added and removed. The class in the css file includes a background image of the mole:
 
-```background-image: url(../images/mole.webp``` 
+The snippet shows a `.mole` class being added and removed. The class in the css file includes a background image of the mole:
+
+`background-image: url(../images/mole.webp`
 
 This was created as it was the easiest way to make the mole appear and disappear for the minigame.
 
@@ -81,14 +94,16 @@ The idea for having a mole class being added and removed was taked from this
 [video.](https://www.youtube.com/watch?v=lhNdUVh3qCc)
 
 ### Tile-Pairs
+
 This game gives the user a grid of customizable size. Each cell's value is hidden and they can only reveal two at a time. By using their memory and revealing two of the same type, those cells stay revealed. The game is won by revealing all the cells.
 
 ![Alt text](assets\images\readme\tile-pairs screenshot.PNG)
 
 #### Javascript
+
 The CreateGrid function creates the grid of cells the user sees. It calls function createPairsArray for the numbers to put in the cells.
 
-The values in the cells need to range from 1 to half (x-width * y-width), with each value repeating once. These numbers are created in CreatePairsArray function. function "shuffle" shuffles the array.
+The values in the cells need to range from 1 to half (x-width \* y-width), with each value repeating once. These numbers are created in CreatePairsArray function. function "shuffle" shuffles the array.
 
 The div with the class "grid container" is styled as "grid" and takes other styles so it can accept the tiles.
 
@@ -99,86 +114,101 @@ A loop creates divs, which are the cells. Each has an event listener for clicks,
 Styling is inherited from style.css.
 
 #### Tile Clicked Function
+
 Checks if 0, 1, or 2 tiles have been revealed, and does the required behaviour as required. When both are open, the are checked if equal. If the count of matched tiles matches the total number of tiles, you win the game.
 
+### Tic Tac Toe
 
-### Tic Tac Toe  
 This game was built using a reusable `<main class="game-container">` layout to maintain consistency across the site. The grid is made of nine clickable tiles, each representing a cell in the classic 3×3 board. JavaScript handles turn-based logic, win/draw detection, and game resets, with randomized starting turns to keep gameplay fresh. The design is responsive and styled using Bootstrap and custom CSS for a clean, arcade-inspired look.
 
 ![Screenshot of Tic Tac Toe game](assets/images/readme/tictactoe-screenshot.png)
 
-*A screenshot showing the Tic Tac Toe game layout and interface.*
+_A screenshot showing the Tic Tac Toe game layout and interface._
 
 ## Testing
+
 ### Google's Lighthouse Performance
+
 The page was tested in incognito mode in Google Chrome.
 
-#### Mobile:
-##### Whack-a-mole:
-
-![WAM Google chrome lighthouse testing for mobile](assets/images/readme/wam-lighthouse-mobile.png)
+Mobile:
 
 #### Desktop:
+
 ##### Whack-a-mole:
 
 ![WAM Google chrome lighthouse testing for desktop](assets/images/readme/wam-lighthouse-desktop.png)
 
 ### Code Validation
+
 [HTML Validation](https://validator.w3.org/)
 
 #### Whack-a-mole:
-While there were some comments about a ```/>``` being used at the end of some elements no other errors were shown.
+
+While there were some comments about a `/>` being used at the end of some elements no other errors were shown.
 
 ![WAM HTML validation](assets/images/readme/wam-html-validator.png)
 
-
 [CSS Validation](https://jigsaw.w3.org/css-validator/)
 
-
-
 [JavaScript validation](https://jshint.com/)
+
 #### Whack-a-mole:
-Although JSHint shows 23 warnings it is to do with ES version configuration and is not a problem with the code. 
+
+Although JSHint shows 23 warnings it is to do with ES version configuration and is not a problem with the code.
 
 ![WAM JSHint validation](assets/images/readme/wam-jshint.png)
 
+#### Rock Paper Scissors
+
+I used the following websites to validate rock-paper-scissors.html, rock-paper-scissors.js, and rock-paper-scissors.css. They reported zero errors. While JSHint showed warnings, these were just for ES version configuration and won't cause issues with the code.
+
+[W3 Validator for HTML](https://validator.w3.org/)
+
+[W3 Validator for CSS](https://jigsaw.w3.org/css-validator/)
+
+[JSHint Linter for JavaScript](https://jshint.com/)
 
 ### WAVE Acessibility
+
 [WAVE - Web Accessibility Evaluation Tool](https://wave.webaim.org/)
 
 #### Whack-a-mole:
 
 ![WAM JSHint validation](assets/images/readme/wam-wave-accessibility.png)
 
-
 ### Browser Compatability
-The has been run on Google Chrome, Microsoft Edge and Mozilla Firefox. All which run well and as intended.
 
+The has been run on Google Chrome, Microsoft Edge and Mozilla Firefox. All which run well and as intended.
 
 ## AI Use & Reflection
 
 #### Whack-a-mole:
+
 Some use of AI was with documentaion and helping to add comments on code. While some of the comments it suggested was a little complicated, it was easy to ask the AI to shorten the code. Additionally, it was good to use it as an example of how to write the comment myself.
 
 AI was also used to help quickly find bugs in the code. It was not always correct with where the bug was in the code but it provided suggestions on where the problem could be as well as how to fix it, which helped with workflow as it shorted time needed to fix them.
 
 Reflection:
 
-While the use of AI helped to improve on workflow and quickly find small bugs; some of the suggestions given did not help at all or were confusing. Thus it wasn't used as it was important to write code that was easy to understand. 
+While the use of AI helped to improve on workflow and quickly find small bugs; some of the suggestions given did not help at all or were confusing. Thus it wasn't used as it was important to write code that was easy to understand.
 
 =======
 
 ### In Tile Pairs
+
 The most significant uses of AI were to help problem solving how to shuffle an array and how to create a grid of cells, after much problem solving. It provided the code and saved a lot of time.
 
 To a lesser extent it was used for some minor queries about problem solving.
 
-
-
 ## Deployment
+
 Early deployment of the site was done for ease of development as the project progressed.
-#### Deloying on Github:
+
+### Deloying on Github
+
 The site was deployed to Github Pages using the following method:
+
 - Go to the Github repository.
 - Navigate to the 'settings' tab.
 - Got to Pages > Build and deployment
@@ -188,7 +218,7 @@ The site was deployed to Github Pages using the following method:
 - Refresh the page.
 - Click the 'Visit site' which will open the deployed page in a new tab. (This may take a few minutes).
 
-View the deployed site [here.](https://louisharding.github.io/Minigames-Me/)
+View the deployed site at [Minigames-Me](https://louisharding.github.io/Minigames-Me/).
 
 ## Authors
 
@@ -207,9 +237,5 @@ View the deployed site [here.](https://louisharding.github.io/Minigames-Me/)
 ChatGPT generated the icons for the Rock Paper Scissors game.
 
 ##### Colour Flipper:
+
 The small minigame was created with the help of this [video.](https://www.youtube.com/watch?v=3PHXvlpOkf4&t=421s)
-
-
-
-
-
