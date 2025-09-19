@@ -17,15 +17,28 @@
   --star-hue: 1deg;
   --star-orientation: 1deg;
 }
+h1,
+h2,
+h3 {
+  font-family: "Orbitron" sans-serif;
+  color: #333;
+}
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
   font-family: var(--main-font);
-  background: linear-gradient(to bottom,  #000000 33%,#9993ff 70%,#4538ff 85%,#1500ff 98%,#9e24f4 99.9%); 
-  /* background-image: url(/assets/images/controllerIcons.png), linear-gradient(to bottom,  #000000 33%,#9993ff 70%,#4538ff 85%,#1500ff 98%,#9e24f4 99.9%); ; */
+  background: linear-gradient(
+    to bottom,
+    #000000 33%,
+    #9993ff 70%,
+    #4538ff 85%,
+    #1500ff 98%,
+    #9e24f4 99.9%
+  );
   background-blend-mode: overlay;
   background-size: 5%;
   opacity: 0.9;
@@ -33,6 +46,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 
 /* Shooting Star Background */
 .shooting-star-bg {
@@ -65,8 +84,6 @@ body {
   }
 }
 
-
-
 /* Reusable game container for all games */
 .game-container {
   display: flex;
@@ -93,7 +110,7 @@ body {
 .game-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-template-rows: repeat(3, 1fr);    /* 3 rows */
+  grid-template-rows: repeat(3, 1fr); /* 3 rows */
   gap: 1rem;
   width: 100%;
   max-width: 612px;
@@ -133,7 +150,6 @@ body {
   filter: brightness(65%);
 }
 
-
 /* Minigame specific styles*/
 
 @media (max-width: 400px) {
@@ -150,7 +166,6 @@ body {
   }
 }
 
-
 /* Tic tac toe Status text (DISPLAYS STATUS -PLAYER 1 or PLAYER 2 NOT NEEDED */
 /* LOOK AT - CONSOLIDATE WITH GAME INFO POSSIBLE */
 #status {
@@ -161,7 +176,6 @@ body {
 }
 /* End of Tic Tac Toe */
 
-
 /* Whack-a-mole AKA wam */
 
 /* 
@@ -169,14 +183,14 @@ body {
     Typically used to represent a mole in a whack-a-mole game.
     Add visual properties, positioning, and animations as needed.
 */
-.mole, .mole:hover {
+.mole,
+.mole:hover {
   background-image: url(/assets/images/mole.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 80%;
 }
 /*End of Mole */
-
 
 /* Media queries */
 @media (max-width: 800px) {
@@ -187,63 +201,60 @@ body {
   }
 }
 
-
-
-      /* 
+/* 
         The .navbar class styles the navigation bar of the website.
         It typically contains layout, color, spacing, and positioning rules
         to ensure consistent appearance and usability across pages.
       */
-      .navbar {
-        background-color: var(--purple);
-        border-bottom: 3px solid var(--accent);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        padding: 0.5rem 0;
-      }
-      .navbar-brand {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: var(--accent);
-        text-decoration: none;
-        text-transform: uppercase;
-      }
-      .logo-img {
-        display: block;
-        width: 64px;
-        height: 64px;
-        object-fit: contain;
-        border-radius: 10px;
-        border: 2px solid var(--accent);
-      }
-      .navbar-nav .nav-link,
-      .navbar-nav .nav-link.active {
-        border-radius: 6px;
-        color: #222;
-        font-weight: 600;
-        padding: 0.4rem 0.9rem;
-        transition: background-color 0.25s, color 0.25s;
-      }
-      .navbar-nav .nav-link:hover,
-      .navbar-nav .nav-link.active:hover {
-        background-color: var(--accent);
-        color: var(--purple);
-      }
-      .navbar-toggler {
-        border: none;
-      }
-      .navbar-toggler-icon {
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        background-image: url("/assets/images/navbar-toggler-icon.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-      /*End of Navbar */
-
+.navbar {
+  background-color: var(--purple);
+  border-bottom: 3px solid var(--accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.logo-img {
+  display: block;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 2px solid var(--accent);
+}
+.navbar-nav .nav-link,
+.navbar-nav .nav-link.active {
+  border-radius: 6px;
+  color: #222;
+  font-weight: 600;
+  padding: 0.4rem 0.9rem;
+  transition: background-color 0.25s, color 0.25s;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active:hover {
+  background-color: var(--accent);
+  color: var(--purple);
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url("/assets/images/navbar-toggler-icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/*End of Navbar */
 
 /* Homepage Styles */
 .games-grid {
@@ -270,4 +281,3 @@ body {
   transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(75, 63, 114, 0.12);
 }
-
