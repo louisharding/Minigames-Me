@@ -2,6 +2,7 @@ console.log("start of script")
 
 /**this function creates the grid */ 
 const createGrid = function(rows, cols) {
+  tilesMatched = 0
   const pairsArray = createPairsArray(rows,cols)
   const container = document.getElementById('grid-container');
   container.innerHTML = "";
@@ -21,7 +22,7 @@ const createGrid = function(rows, cols) {
     //these two lines saved before changing, just in case
     // cell.textContent = i + 1; // optional: cell number
     // cell.id = i + 1;
-    cell.classList.add(pairsArray[i]); //add a class, or change the value, or something?
+    cell.classList.add(pairsArray[i]); 
     cell.textContent = "???"; 
     cell.id = i + 1;
     cell.addEventListener("click", tileClicked)
