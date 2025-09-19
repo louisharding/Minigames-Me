@@ -87,6 +87,16 @@ This game gives the user a grid of customizable size. Each cell's value is hidde
 
 ![Alt text](assets\images\readme\tile-pairs screenshot.PNG)
 
+### Tic Tac Toe  
+This game was built using a reusable `<main class="game-container">` layout to maintain consistency across the site. The grid is made of nine clickable tiles, each representing a cell in the classic 3×3 board. JavaScript handles turn-based logic, win/draw detection, and game resets, with randomized starting turns to keep gameplay fresh. The design is responsive and styled using Bootstrap and custom CSS for a clean, arcade-inspired look.
+
+![Screenshot of Tic Tac Toe game](assets/images/readme/tictactoe-screenshot.png)
+
+*A screenshot showing the Tic Tac Toe game layout and interface.*
+
+
+
+
 #### Javascript
 The CreateGrid function creates the grid of cells the user sees. It calls function createPairsArray for the numbers to put in the cells.
 
@@ -196,5 +206,6 @@ ChatGPT generated the icons for the Rock Paper Scissors game.
 
 ##### Colour Flipper:
 The small minigame was created with the help of this [video.](https://www.youtube.com/watch?v=3PHXvlpOkf4&t=421s)
+
 
 
