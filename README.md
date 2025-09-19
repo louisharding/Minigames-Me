@@ -35,8 +35,6 @@ The mole image used in whack-a-mole was generated with the help of chatgpt.
 
 ## Development
 
-(Include development on site show code and explain reasons for doing/changing etc)
-
 ### Whack-a-mole
 
 ##### HTML:
@@ -99,13 +97,35 @@ The idea for having a mole class being added and removed was taked from this
 
 This game gives the user a grid of customizable size. Each cell's value is hidden and they can only reveal two at a time. By using their memory and revealing two of the same type, those cells stay revealed. The game is won by revealing all the cells.
 
-The CreateGrid function creates the grid of cells the user sees.
+![Alt text](assets\images\readme\tile-pairs screenshot.PNG)
 
-The values in the cells need to range from 1 to half (x-width \* y-width), with each value repeating once. These numbers are created in CreatePairsArray function.
+#### Javascript
+
+The CreateGrid function creates the grid of cells the user sees. It calls function createPairsArray for the numbers to put in the cells.
+
+The values in the cells need to range from 1 to half (x-width \* y-width), with each value repeating once. These numbers are created in CreatePairsArray function. function "shuffle" shuffles the array.
+
+The div with the class "grid container" is styled as "grid" and takes other styles so it can accept the tiles.
+
+A loop creates divs, which are the cells. Each has an event listener for clicks, a unique ID, and data-value records the number seen by the user.
+
+#### Styling
+
+Styling is inherited from style.css.
+
+#### Tile Clicked Function
+
+Checks if 0, 1, or 2 tiles have been revealed, and does the required behaviour as required. When both are open, the are checked if equal. If the count of matched tiles matches the total number of tiles, you win the game.
+
+### Tic Tac Toe
+
+This game was built using a reusable `<main class="game-container">` layout to maintain consistency across the site. The grid is made of nine clickable tiles, each representing a cell in the classic 3×3 board. JavaScript handles turn-based logic, win/draw detection, and game resets, with randomized starting turns to keep gameplay fresh. The design is responsive and styled using Bootstrap and custom CSS for a clean, arcade-inspired look.
+
+![Screenshot of Tic Tac Toe game](assets/images/readme/tictactoe-screenshot.png)
+
+_A screenshot showing the Tic Tac Toe game layout and interface._
 
 ## Testing
-
-(INSERT VALIDATION FOR EACH PAGE AND FILE)
 
 ### Google's Lighthouse Performance
 
@@ -153,21 +173,33 @@ I used the following websites to validate rock-paper-scissors.html, rock-paper-s
 
 [WAVE - Web Accessibility Evaluation Tool](https://wave.webaim.org/)
 
+#### Whack-a-mole:
+
+![WAM JSHint validation](assets/images/readme/wam-wave-accessibility.png)
+
 ### Browser Compatability
 
-(Test on different browsers to make sure it works as intended)
+The has been run on Google Chrome, Microsoft Edge and Mozilla Firefox. All which run well and as intended.
 
 ## AI Use & Reflection
 
-### Code creation
+#### Whack-a-mole:
 
-### Debugging code
+Some use of AI was with documentaion and helping to add comments on code. While some of the comments it suggested was a little complicated, it was easy to ask the AI to shorten the code. Additionally, it was good to use it as an example of how to write the comment myself.
 
-### Code optimisation
+AI was also used to help quickly find bugs in the code. It was not always correct with where the bug was in the code but it provided suggestions on where the problem could be as well as how to fix it, which helped with workflow as it shorted time needed to fix them.
 
-### Reflection
+Reflection:
 
-(in development process and impact on workflow)
+While the use of AI helped to improve on workflow and quickly find small bugs; some of the suggestions given did not help at all or were confusing. Thus it wasn't used as it was important to write code that was easy to understand.
+
+=======
+
+### In Tile Pairs
+
+The most significant uses of AI were to help problem solving how to shuffle an array and how to create a grid of cells, after much problem solving. It provided the code and saved a lot of time.
+
+To a lesser extent it was used for some minor queries about problem solving.
 
 ## Deployment
 

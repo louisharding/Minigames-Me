@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
       content="A set of minigames to play, including classic Snake."
-    />
+    >
     <title>Minigames-Me</title>
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
     <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
       rel="stylesheet"
-    />
+    >
     <!-- Bootstrap 5 CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    >
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
     <header>
       <nav
         id="navbar"
         class="navbar navbar-expand-lg"
-        role="navigation"
         aria-label="Main Navigation"
       >
         <div class="container">
@@ -37,7 +36,7 @@
               src="assets/images/arcadeimage.png"
               alt="Minigames Me Logo"
               class="logo-img"
-            />
+            >
             <span class="ms-2">Minigames-Me</span>
           </a>
           <button
@@ -134,42 +133,5 @@
       integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
       crossorigin="anonymous"
     ></script>
-    <!-- Nice-To-Have Shooting Stars -->
-    <!-- <script>
-      function randomInt(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-      }
-      const starImgs = [
-        "assets/images/star1.png",
-        "assets/images/star2.png",
-        "assets/images/star3.png",
-        "assets/images/star4.png",
-      ];
-      function createShootingStar() {
-        const star = document.createElement("div");
-        star.className = "shooting-star";
-        const duration = randomInt(2, 5);
-        const top = randomInt(0, 50);
-        star.style.top = top + "vh";
-        star.style.left = randomInt(-10, 10) + "vw";
-        star.style.animationDuration = duration + "s";
-        star.style.animationTimingFunction = `cubic-bezier(${Math.random().toFixed(
-          2
-        )},${Math.random().toFixed(2)},${Math.random().toFixed(
-          2
-        )},${Math.random().toFixed(2)})`;
-        star.style.setProperty(
-          "--star-end-scale",
-          (Math.random() * 0.5 + 0.3).toFixed(2)
-        );
-        // Randomly choose one of the 4 star images
-        star.style.backgroundImage = `url('${
-          starImgs[randomInt(0, starImgs.length - 1)]
-        }')`;
-        document.querySelector(".shooting-star-bg").appendChild(star);
-        setTimeout(() => star.remove(), duration * 1000);
-      }
-      setInterval(createShootingStar, 800);
-    </script> -->
   </body>
 </html>
