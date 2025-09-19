@@ -57,19 +57,23 @@
     <!-- Main -->
     <main class="game-container">
       <h1 class="text-center">Whack-a-Mole <i class="fa-solid fa-gavel fa-flip-horizontal"></i></h1>
+      <!-- Show game info: buttons, timer and score -->
       <div id="game-info" class="d-flex justify-content-between mb-3">
         <div>
           <button id="start-btn" class="ms-5 px-2">Start</button>
           <button id="retry-btn" class="px-2" disabled>Retry</button>
         </div>
+        <!-- Timer -->
         <div id="timer" class="px-2">
           <p>Time Left: <span id="time-left">0</span>s</p>
         </div>
+        <!-- Score -->
         <div class="px-2">
           <p>Score: <span id="score-text">0</span></p>
         </div>
       </div>
       <p id="game-over-message" class="text-center"></p>
+      <!-- Grid where the mole will appear -->
       <div class="game-grid">
         <div id="tile-1" class="game-tile"></div>
         <div id="tile-2" class="game-tile"></div>

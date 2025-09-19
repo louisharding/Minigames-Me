@@ -170,7 +170,7 @@ body {
     Add visual properties, positioning, and animations as needed.
 */
 .mole, .mole:hover {
-  background-image: url(/assets/images/mole.webp);
+  background-image: url(../images/mole.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 80%;
