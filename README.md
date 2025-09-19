@@ -22,6 +22,7 @@ The website is designed with simplicity and access as a main focus, demonstratin
 
 ##### Whack-a-mole:
 The mole image used in whack-a-mole was generated with the help of chatgpt.
+
 ![Google chrome lighthouse performance](assets/images/mole.webp)
 
 ## Development
@@ -156,4 +157,5 @@ ChatGPT generated the icons for the Rock Paper Scissors game.
 
 ##### Colour Flipper:
 The small minigame was created with the help of this [video.](https://www.youtube.com/watch?v=3PHXvlpOkf4&t=421s)
+
 
