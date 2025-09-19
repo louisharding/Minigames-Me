@@ -45,7 +45,7 @@ body {
 }
 
 /* Shooting Star Background */
-/* .shooting-star-bg {
+.shooting-star-bg {
   position: fixed;
   top: 0;
   left: 0;
@@ -73,7 +73,7 @@ body {
     left: 110vw;
     transform: scale(var(--star-end-scale, 0.5));
   }
-} */
+}
 
 /* Reusable game container for all games */
 .game-container {
