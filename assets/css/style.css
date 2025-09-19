@@ -17,6 +17,12 @@
   --star-hue: 1deg;
   --star-orientation: 1deg;
 }
+h1,
+h2,
+h3 {
+  font-family: "Orbitron" sans-serif;
+  color: #333;
+}
 
 html,
 body {
@@ -33,7 +39,6 @@ body {
     #1500ff 98%,
     #9e24f4 99.9%
   );
-  /* background-image: url(/assets/images/controllerIcons.png), linear-gradient(to bottom,  #000000 33%,#9993ff 70%,#4538ff 85%,#1500ff 98%,#9e24f4 99.9%); ; */
   background-blend-mode: overlay;
   background-size: 5%;
   opacity: 0.9;
@@ -41,6 +46,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 
 /* Shooting Star Background */
 .shooting-star-bg {
@@ -246,8 +257,7 @@ body {
 /*End of Navbar */
 
 /* Homepage Styles
-   Grid and card visuals for homepage game tiles.
-   Comments kept minimal and focused on intent. */
+   Grid and card visuals for homepage game tiles.*/
 
 /* Grid: responsive tile layout */
 .games-grid {
@@ -261,7 +271,7 @@ body {
 .game-card-hyperlink {
   border: 2px solid var(--purple);
   border-radius: 12px;
-  background: #f6f7fa;
+  background: #fff;
   box-shadow: 0 6px 18px rgba(75, 63, 114, 0.06);
   display: flex;
   flex-direction: column;
@@ -271,7 +281,7 @@ body {
   text-align: center;
 }
 
-/* Hover: strong neon surround matching button hover color */
+/* Hover: neon surround matching button hover color */
 .game-card-hyperlink:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(75, 63, 114, 0.12),
@@ -280,7 +290,7 @@ body {
   border-color: rgba(0, 201, 167, 0.28);
 }
 
-/* Focus/active: stronger neon for keyboard and active states */
+/* Focus/active: neon for keyboard and active states */
 .game-card-hyperlink:focus-within,
 .game-card-hyperlink:active {
   box-shadow: 0 14px 30px rgba(75, 63, 114, 0.12),
