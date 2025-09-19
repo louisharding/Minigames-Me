@@ -42,12 +42,15 @@ body {
   background-blend-mode: overlay;
   background-size: 5%;
   opacity: 0.9;
-  color: var(--main-text);
-  margin: 0;
-  padding: 0;
+
+  
+  /* color: var(--main-text); */
+  /* margin: 0; */
+  /* padding: 0; */
 }
 
 /* main{
+  min-height: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
