@@ -45,7 +45,7 @@ body {
 }
 
 /* Shooting Star Background */
-.shooting-star-bg {
+/* .shooting-star-bg {
   position: fixed;
   top: 0;
   left: 0;
@@ -73,7 +73,7 @@ body {
     left: 110vw;
     transform: scale(var(--star-end-scale, 0.5));
   }
-}
+} */
 
 /* Reusable game container for all games */
 .game-container {
@@ -147,13 +147,6 @@ body {
     hsla(0, 0%, 1%, 1) 18%,
     hsla(241, 100%, 64%, 1) 36%,
     rgb(99, 107, 126) 44%,
-    hsla(0, 0%, 0%, 1) 59%
-  );
-
-    circle,
-    hsla(0, 0%, 1%, 1) 18%,
-    hsla(241, 100%, 64%, 1) 36%,
-    hsla(222, 100%, 54%, 1) 44%,
     hsla(0, 0%, 0%, 1) 59%
   );
 
