@@ -102,6 +102,7 @@ body {
 
 /* Generic Game Styles */
 /* LOOK AT - standardise this across all games, for things like score, buttons etc */
+/* CURRENTLY WAM */
 #game-info {
   display: flex;
 }
