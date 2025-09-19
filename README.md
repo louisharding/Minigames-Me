@@ -13,8 +13,9 @@ The website is designed with simplicity and access as a main focus, demonstratin
 
 ## Design and Planning:
 ### Typography
-![Google fonts - Orbitron font](assets/images/readme/orbitron-font.png)
 This font was chosen for a sci-fi / futuristic / space theme.
+
+![Google fonts - Orbitron font](assets/images/readme/orbitron-font.png)
 
 ### Colour Scheme
 (Color scheme of site)
@@ -23,6 +24,7 @@ This font was chosen for a sci-fi / futuristic / space theme.
 
 ##### Whack-a-mole:
 The mole image used in whack-a-mole was generated with the help of chatgpt.
+
 ![Google chrome lighthouse performance](assets/images/mole.webp)
 
 ## Development
@@ -163,4 +165,5 @@ ChatGPT generated the icons for the Rock Paper Scissors game.
 
 ##### Colour Flipper:
 The small minigame was created with the help of this [video.](https://www.youtube.com/watch?v=3PHXvlpOkf4&t=421s)
+
 
