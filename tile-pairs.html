@@ -1,34 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link href="assets\css\style.css" rel="stylesheet"> 
-    <!-- the style link is an experiment -->
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link href="assets\css\style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+  </head>
+  <body style="text-align:center;">
 
-<div class="abc"></div>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="assets/images/arcadeimage.png"
+            alt="Minigames Logo"
+            class="logo-img"
+          />
+          <span class="ms-2">Minigames-Me</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
 
-<form>
-    <input type="text" id="textInput1" value="2" style="width: 50px">
-    <input type="text" id="textInput2" value="2" style="width: 50px">
-    <input type="button" id="createGridButton" onclick="createGrid(textInput1.value, textInput2.value)" value="Create Grid">
-</form>
-
-
-
-<br>
-
-<div id="grid-container"></div>
-
-
-
+<!-- GAME: -->
+    <div class="game-container">
+      <div >
+        <h1>Tile Pairs</h1>
+        <br />
+        <h3>
+          Each number has a pair. You can only reveal two numbers at a time.
+          Reveal all the pairs to winner winner chicken dinner.
+        </h3>
+        <form style="margin: 0 auto; width: 300px">
+          <input type="text" id="textInput1" value="8" style="width: 50px" />
+          <input type="text" id="textInput2" value="8" style="width: 50px" />
+          <input
+            type="button"
+            id="createGridButton"
+            onclick="createGrid(textInput1.value, textInput2.value)"
+            value="Create Grid"
+          />
+        </form>
+      </div>
+      <div id="grid-container" style="margin: 10%"></div>
+    </div>
 
     <script src="assets/js/tile-pairs.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
