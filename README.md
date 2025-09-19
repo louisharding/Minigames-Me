@@ -18,7 +18,9 @@ This font was chosen for a sci-fi / futuristic / space theme.
 ![Google fonts - Orbitron font](assets/images/readme/orbitron-font.png)
 
 ### Colour Scheme
-(Color scheme of site)
+Colour palette pulled from the finished website.
+
+![Google fonts - Orbitron font](assets/images/readme/minigames-me-colour-palette.png)
 
 ### Images and Icons
 
@@ -95,15 +97,19 @@ The values in the cells need to range from 1 to half (x-width * y-width), with e
 ### Google's Lighthouse Performance
 The page was tested in incognito mode in Google Chrome.
 
-Mobile:
+#### Mobile:
+##### Whack-a-mole:
 
+![WAM Google chrome lighthouse testing for mobile](assets/images/readme/wam-lighthouse-mobile.png)
 
-Desktop:
+#### Desktop:
+##### Whack-a-mole:
 
+![WAM Google chrome lighthouse testing for desktop](assets/images/readme/wam-lighthouse-desktop.png)
 
 ### Code Validation
-
 [HTML Validation](https://validator.w3.org/)
+
 #### Whack-a-mole:
 While there were some comments about a ```/>``` being used at the end of some elements no other errors were shown.
 
