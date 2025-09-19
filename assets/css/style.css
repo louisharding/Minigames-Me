@@ -7,28 +7,17 @@
   --purple: #4b3f72;
   --accent: #00c9a7;
   --text: #333;
-  /* Shooting Star Background - Customizable */
-  --star-img1: url(/assets/images/controllerIcons1.png);
-  --star-img2: url(/assets/images/controllerIcons2.png);
-  --star-img3: url(/assets/images/controllerIcons3.png);
-  --star-img4: url(/assets/images/controllerIcons4.png);
-  --star-opacity: 0.7;
-  --star-size: 64px;
-  --star-hue: 1deg;
-  --star-orientation: 1deg;
 }
 h1,
 h2,
 h3 {
-  font-family: "Orbitron" sans-serif;
+  font-family: "Orbitron", sans-serif;
   color: #333;
 }
-
 html,
 body {
   height: 100%;
 }
-
 body {
   font-family: var(--main-font);
   background: linear-gradient(
@@ -45,7 +34,7 @@ body {
 }
 
 /* Shooting Star Background */
-.shooting-star-bg {
+/* .shooting-star-bg {
   position: fixed;
   top: 0;
   left: 0;
@@ -73,7 +62,7 @@ body {
     left: 110vw;
     transform: scale(var(--star-end-scale, 0.5));
   }
-}
+} */
 
 /* Reusable game container for all games */
 .game-container {
@@ -95,7 +84,6 @@ body {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
 @media (max-width: 600px) {
   .game-container {
     padding: 1rem;
@@ -112,20 +100,15 @@ body {
   max-width: 612px;
   margin: 0 auto;
 }
-
-/* Generic Game Styles */
-/* LOOK AT - standardise this across all games, for things like score, buttons etc */
-/* CURRENTLY WAM */
+/* Shows general game info such as score, points etc */
 #game-info {
   display: flex;
 }
-
-/* LOOK AT - standardise this across all games, for things like score, buttons etc */
+/* General style for reset buttons */
 #reset:hover {
   background: #00c9a7;
   color: #4b3f72;
 }
-
 /* Generic tile for all games */
 .game-tile {
   width: 100%;
@@ -139,9 +122,7 @@ body {
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.15s, transform 0.12s;
-
   background: hsla(0, 0%, 1%, 1);
-
   background: radial-gradient(
     circle,
     hsla(0, 0%, 1%, 1) 18%,
@@ -149,7 +130,6 @@ body {
     rgb(99, 107, 126) 44%,
     hsla(0, 0%, 0%, 1) 59%
   );
-
   background: -webkit-radial-gradient(
     circle,
     hsla(0, 0%, 1%, 1) 18%,
@@ -157,17 +137,15 @@ body {
     hsla(222, 100%, 54%, 1) 44%,
     hsla(0, 0%, 0%, 1) 59%
   );
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#020202", endColorstr="#4946FF", GradientType=1 );
-
   font-size: 2rem;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 500;
+  color: #fff;
 }
 .game-tile:hover {
   filter: brightness(65%);
 }
-
 /* Minigame specific styles*/
-
 @media (max-width: 400px) {
   #game {
     gap: 6px;
@@ -181,22 +159,18 @@ body {
     min-height: 60px;
   }
 }
-
-/* Tic tac toe Status text (DISPLAYS STATUS -PLAYER 1 or PLAYER 2 NOT NEEDED */
-/* LOOK AT - CONSOLIDATE WITH GAME INFO POSSIBLE */
+/* Tic tac toe Status text -PLAYER 1 or PLAYER 2 */
 #status {
   color: #4b3f72;
   font-size: 1.1rem;
   margin: 0.5rem 0 1rem;
   text-align: center;
 }
-/* End of Tic Tac Toe */
-
 /* 
-    Whack-a-mole AKA wam 
-    The .mole class styles the mole element in the Minigames-Me project.
-    Typically used to represent a mole in a whack-a-mole game.
-    Add visual properties, positioning, and animations as needed.
+  Whack-a-mole AKA wam 
+  The .mole class styles the mole element in the Minigames-Me project.
+  Typically used to represent a mole in a whack-a-mole game.
+  Add visual properties, positioning, and animations as needed.
 */
 .mole,
 .mole:hover {
@@ -205,8 +179,6 @@ body {
   background-repeat: no-repeat;
   background-size: 80%;
 }
-/*End of Mole */
-
 /* Media queries */
 @media (max-width: 800px) {
   .game-container {
@@ -215,12 +187,11 @@ body {
     margin: 2rem auto;
   }
 }
-
 /* 
-        The .navbar class styles the navigation bar of the website.
-        It typically contains layout, color, spacing, and positioning rules
-        to ensure consistent appearance and usability across pages.
-      */
+  The .navbar class styles the navigation bar of the website.
+  It typically contains layout, color, spacing, and positioning rules
+  to ensure consistent appearance and usability across pages.
+*/
 .navbar {
   background-color: var(--purple);
   border-bottom: 3px solid var(--accent);
@@ -269,19 +240,15 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
 }
-/*End of Navbar */
-
 /* Homepage Styles
-   Grid and card visuals for homepage game tiles.*/
-
-/* Grid: responsive tile layout */
+   Grid and card visuals for homepage game tiles.
+*/
 .games-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.25rem;
   align-items: stretch;
 }
-
 /* Card: base appearance, spacing and interaction transition */
 .game-card-hyperlink {
   border: 2px solid var(--purple);
@@ -295,7 +262,6 @@ body {
   transition: transform 160ms ease, box-shadow 160ms ease;
   text-align: center;
 }
-
 /* Hover: neon surround matching button hover color */
 .game-card-hyperlink:hover {
   transform: translateY(-6px);
@@ -304,7 +270,6 @@ body {
     0 0 320px rgba(0, 201, 167, 0.08);
   border-color: rgba(0, 201, 167, 0.28);
 }
-
 /* Focus/active: neon for keyboard and active states */
 .game-card-hyperlink:focus-within,
 .game-card-hyperlink:active {
@@ -313,7 +278,6 @@ body {
     0 0 440px rgba(0, 201, 167, 0.16);
   transform: translateY(-6px);
 }
-
 /* Button base: color, padding and smooth hover transitions */
 .game-card-hyperlink .btn,
 .game-card-hyperlink .btn-primary {
@@ -324,7 +288,6 @@ body {
   border-radius: 10px;
   transition: transform 280ms ease, box-shadow 320ms ease, background 240ms ease;
 }
-
 /* Button hover: neon accent, lift and glow */
 .game-card-hyperlink .btn:hover,
 .game-card-hyperlink .btn-primary:hover {
