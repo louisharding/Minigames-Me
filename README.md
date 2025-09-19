@@ -156,9 +156,15 @@ The has been run on Google Chrome, Microsoft Edge and Mozilla Firefox. All which
 
 
 ## AI Use & Reflection
+
+#### Whack-a-mole:
 Some use of AI was with documentaion and helping to add comments on code. While some of the comments it suggested was a little complicated, it was easy to ask the AI to shorten the code. Additionally, it was good to use it as an example of how to write the comment myself.
 
 AI was also used to help quickly find bugs in the code. It was not always correct with where the bug was in the code but it provided suggestions on where the problem could be as well as how to fix it, which helped with workflow as it shorted time needed to fix them.
+
+Reflection:
+
+While the use of AI helped to improve on workflow and quickly find small bugs; some of the suggestions given did not help at all or were confusing. Thus it wasn't used as it was important to write code that was easy to understand. 
 
 =======
 
@@ -167,8 +173,7 @@ The most significant uses of AI were to help problem solving how to shuffle an a
 
 To a lesser extent it was used for some minor queries about problem solving.
 
-### Reflection
-While the use of AI helped to improve on workflow and quickly find small bugs; some of the suggestions given did not help at all or were confusing. Thus it wasn't used as it was important to write code that was easy to understand. 
+
 
 ## Deployment
 Early deployment of the site was done for ease of development as the project progressed.
@@ -203,6 +208,7 @@ ChatGPT generated the icons for the Rock Paper Scissors game.
 
 ##### Colour Flipper:
 The small minigame was created with the help of this [video.](https://www.youtube.com/watch?v=3PHXvlpOkf4&t=421s)
+
 
 
 
