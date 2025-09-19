@@ -101,10 +101,12 @@ body {
 }
 
 /* Generic Game Styles */
+/* LOOK AT - standardise this across all games, for things like score, buttons etc */
 #game-info {
   display: flex;
 }
 
+/* LOOK AT - standardise this across all games, for things like score, buttons etc */
 #reset:hover {
   background: #00c9a7;
   color: #4b3f72;
@@ -149,6 +151,7 @@ body {
 
 
 /* Tic tac toe Status text (DISPLAYS STATUS -PLAYER 1 or PLAYER 2 NOT NEEDED */
+/* LOOK AT - CONSOLIDATE WITH GAME INFO POSSIBLE */
 #status {
   color: #4b3f72;
   font-size: 1.1rem;
@@ -159,9 +162,7 @@ body {
 
 
 /* Whack-a-mole AKA wam */
-.wam-tile:hover {
-  background: #b2ffb2;
-}
+
 /* 
     The .mole class styles the mole element in the Minigames-Me project.
     Typically used to represent a mole in a whack-a-mole game.
