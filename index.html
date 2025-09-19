@@ -24,31 +24,89 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <header></header>
-    <main class="container py-4">
+    <header>
+      <nav
+        id="navbar"
+        class="navbar navbar-expand-lg"
+        role="navigation"
+        aria-label="Main Navigation"
+      >
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img
+              src="assets/images/arcadeimage.png"
+              alt="Minigames Me Logo"
+              class="logo-img"
+            />
+            <span class="ms-2">Minigames-Me</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="index.html"
+                >
+                  Home
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container py-4" aria-label="Minigames List">
       <h1 class="text-center mb-4">Minigames Me</h1>
-      <section class="games-grid">
+      <section class="games-grid" aria-label="Game Links">
         <div class="game-card-hyperlink">
           <h2>Tile Pairs</h2>
-          <a class="btn btn-primary" href="tile-pairs.html" role="button"
+          <a
+            class="btn btn-primary"
+            href="tile-pairs.html"
+            role="button"
+            aria-label="Play tile-pairs"
             >Play</a
           >
         </div>
         <div class="game-card-hyperlink">
           <h2>Colour Flipper</h2>
-          <a class="btn btn-primary" href="colour-flipper.html" role="button"
+          <a
+            class="btn btn-primary"
+            href="colour-flipper.html"
+            role="button"
+            aria-label="Play Colour Flipper"
             >Play</a
           >
         </div>
         <div class="game-card-hyperlink">
           <h2>Whack-A-Mole</h2>
-          <a class="btn btn-primary" href="whack-a-mole.html" role="button"
+          <a
+            class="btn btn-primary"
+            href="whack-a-mole.html"
+            role="button"
+            aria-label="Play Whack-A-Mole"
             >Play</a
           >
         </div>
         <div class="game-card-hyperlink">
           <h2>Tic Tac Toe</h2>
-          <a class="btn btn-primary" href="tictactoe.html" role="button"
+          <a
+            class="btn btn-primary"
+            href="tictactoe.html"
+            role="button"
+            aria-label="Play Tic Tac Toe"
             >Play</a
           >
         </div>
@@ -58,6 +116,7 @@
             class="btn btn-primary"
             href="rock-paper-scissors.html"
             role="button"
+            aria-label="Play Rock Paper Scissors"
             >Play</a
           >
         </div>
