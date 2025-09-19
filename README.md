@@ -30,8 +30,6 @@ The mole image used in whack-a-mole was generated with the help of chatgpt.
 ![Google chrome lighthouse performance](assets/images/mole.webp)
 
 ## Development
-(Include development on site show code and explain reasons for doing/changing etc)
-
 ### Whack-a-mole
 ##### HTML:
 The minigame was added into a main ```class="game-container"``` which was used across the site, this ensured reusability and made sure the games have similar styles and layouts to make the user experience uniform.
@@ -93,7 +91,6 @@ The values in the cells need to range from 1 to half (x-width * y-width), with e
 
 
 ## Testing
-(INSERT VALIDATION FOR EACH PAGE AND FILE)
 ### Google's Lighthouse Performance
 The page was tested in incognito mode in Google Chrome.
 
@@ -130,22 +127,22 @@ Although JSHint shows 23 warnings it is to do with ES version configuration and 
 ### WAVE Acessibility
 [WAVE - Web Accessibility Evaluation Tool](https://wave.webaim.org/)
 
+#### Whack-a-mole:
+
+![WAM JSHint validation](assets/images/readme/wam-wave-accessibility.png)
 
 
 ### Browser Compatability
-(Test on different browsers to make sure it works as intended)
+The has been run on Google Chrome, Microsoft Edge and Mozilla Firefox. All which run well and as intended.
 
 
 ## AI Use & Reflection
+Some use of AI was with documentaion and helping to add comments on code. While some of the comments it suggested was a little complicated, it was easy to ask the AI to shorten the code. Additionally, it was good to use it as an example of how to write the comment myself.
 
-### Code creation
-
-### Debugging code
-
-### Code optimisation
+AI was also used to help quickly find bugs in the code. It was not always correct with where the bug was in the code but it provided suggestions on where the problem could be as well as how to fix it, which helped with workflow as it shorted time needed to fix them.
 
 ### Reflection
-(in development process and impact on workflow)
+While the use of AI helped to improve on workflow and quickly find small bugs; some of the suggestions given did not help at all or were confusing. Thus it wasn't used as it was important to write code that was easy to understand. 
 
 ## Deployment
 Early deployment of the site was done for ease of development as the project progressed.
