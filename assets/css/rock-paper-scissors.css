@@ -22,7 +22,6 @@
   top: 35px;
 }
 
-
 #user-label {
   left: -25px;
 }
@@ -62,6 +61,22 @@ LOOK INTO CONSOLIDATING WITH GAME-INFO
 .choice:hover {
   cursor: pointer;
   background: #4b3f72;
+}
+
+/* Glows for choices */
+.green-glow {
+  border: 4px solid #2ecc71;
+  box-shadow: 0 0 20px #2ecc71;
+}
+
+.red-glow {
+  border: 4px solid #e74c3c;
+  box-shadow: 0 0 20px #e74c3c;
+}
+
+.orange-glow {
+  border: 4px solid #f39c12;
+  box-shadow: 0 0 20px #f39c12;
 }
 
 /* Action message - Make your move */
