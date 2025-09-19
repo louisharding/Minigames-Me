@@ -14,32 +14,9 @@ const createGrid = function(rows, cols) {
   container.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
   container.style.gap = '5px'; // optional
 
-  // .game-tile {
-  // width: 100%;
-  // aspect-ratio: 1/1;
-  // min-width: 60px;
-  // min-height: 60px;
-
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // border: 2px solid #4b3f72;
-  // border-radius: 8px;
-  // cursor: pointer;
-  // transition: background 0.15s, transform 0.12s;
-  // background: #eb56ff;
-  // font-size: 2rem;
-// }
-
   // Create grid cells
   for (let i = 0; i < rows * cols; i++) {
     const cell = document.createElement('div');
-    // cell.style.border = '1px solid #ccc';
-    // cell.style.background = '#f9f9f9';
-    //these two lines saved before changing, just in case
-    // cell.textContent = i + 1; // optional: cell number
-    // cell.id = i + 1;
-    // cell.classList.add(pairsArray[i]); //here
     cell.setAttribute('data-value' , `${pairsArray[i]}`) //this currently causes a bug further down to be fixed
     cell.textContent = "???"; 
     cell.id = i + 1;
@@ -107,8 +84,9 @@ let tileClicked = function(e) {
     }
   }
 
+    
   if (firstTileClicked === null) {
-    e.target.textContent = e.target.dataset.value   ///I WOZ HERE
+    e.target.textContent = e.target.dataset.value   
     firstTileClicked = e.target
     console.log("one clicked, first tile:" , firstTileClicked)
   } else if (secondTileClicked === null) {
@@ -134,15 +112,8 @@ let tileClicked = function(e) {
         alert("Winner Winner Chicken Dinner!!!!")
 
       }
-      // secondTileClicked.textContent = secondTileClicked.textContent + "✓"
-    } //else {
+    } 
 
-    //RESET:
-    // firstTileClicked.textContent = "???"
-    // firstTileClicked = null
-    // secondTileClicked.textContent = "???"
-    // secondTileClicked = null
-    // console.log("reset")
     }
   }
 
