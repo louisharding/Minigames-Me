@@ -42,19 +42,7 @@ body {
   background-blend-mode: overlay;
   background-size: 5%;
   opacity: 0.9;
-
-  
-  /* color: var(--main-text); */
-  /* margin: 0; */
-  /* padding: 0; */
 }
-
-/* main{
-  min-height: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 /* Shooting Star Background */
 .shooting-star-bg {
@@ -151,7 +139,12 @@ body {
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.15s, transform 0.12s;
-  background: #eb56ff;
+  background: #3f5efb;
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 0.55) 0%,
+    rgba(252, 70, 107, 0.52) 100%
+  );
   font-size: 2rem;
 }
 .game-tile:hover {
@@ -184,9 +177,8 @@ body {
 }
 /* End of Tic Tac Toe */
 
-/* Whack-a-mole AKA wam */
-
 /* 
+    Whack-a-mole AKA wam 
     The .mole class styles the mole element in the Minigames-Me project.
     Typically used to represent a mole in a whack-a-mole game.
     Add visual properties, positioning, and animations as needed.
