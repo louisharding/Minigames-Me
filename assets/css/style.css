@@ -256,7 +256,10 @@ body {
 }
 /*End of Navbar */
 
-/* Homepage Styles */
+/* Homepage Styles
+   Grid and card visuals for homepage game tiles.*/
+
+/* Grid: responsive tile layout */
 .games-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -264,6 +267,7 @@ body {
   align-items: stretch;
 }
 
+/* Card: base appearance, spacing and interaction transition */
 .game-card-hyperlink {
   border: 2px solid var(--purple);
   border-radius: 12px;
@@ -273,11 +277,44 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 1.25rem;
-  transition: transform 0.16s, box-shadow 0.16s;
+  transition: transform 160ms ease, box-shadow 160ms ease;
   text-align: center;
 }
 
+/* Hover: neon surround matching button hover color */
 .game-card-hyperlink:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(75, 63, 114, 0.12);
+  box-shadow: 0 12px 24px rgba(75, 63, 114, 0.12),
+    0 0 80px rgba(0, 201, 167, 0.28), 0 0 180px rgba(0, 201, 167, 0.2),
+    0 0 320px rgba(0, 201, 167, 0.08);
+  border-color: rgba(0, 201, 167, 0.28);
+}
+
+/* Focus/active: neon for keyboard and active states */
+.game-card-hyperlink:focus-within,
+.game-card-hyperlink:active {
+  box-shadow: 0 14px 30px rgba(75, 63, 114, 0.12),
+    0 0 112px rgba(0, 201, 167, 0.36), 0 0 240px rgba(0, 201, 167, 0.32),
+    0 0 440px rgba(0, 201, 167, 0.16);
+  transform: translateY(-6px);
+}
+
+/* Button base: color, padding and smooth hover transitions */
+.game-card-hyperlink .btn,
+.game-card-hyperlink .btn-primary {
+  background: #4b3f72;
+  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 0.48rem 0.9rem;
+  border-radius: 10px;
+  transition: transform 280ms ease, box-shadow 320ms ease, background 240ms ease;
+}
+
+/* Button hover: neon accent, lift and glow */
+.game-card-hyperlink .btn:hover,
+.game-card-hyperlink .btn-primary:hover {
+  background: #00c9a7;
+  color: #16202a;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(0, 201, 167, 0.08);
 }
