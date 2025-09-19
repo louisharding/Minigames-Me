@@ -80,6 +80,15 @@ This was created as it was the easiest way to make the mole appear and disappear
 The idea for having a mole class being added and removed was taked from this  
 [video.](https://www.youtube.com/watch?v=lhNdUVh3qCc)
 
+### Tile-Pairs
+This game gives the user a grid of customizable size. Each cell's value is hidden and they can only reveal two at a time. By using their memory and revealing two of the same type, those cells stay revealed. The game is won by revealing all the cells.
+
+The CreateGrid function creates the grid of cells the user sees.
+
+The values in the cells need to range from 1 to half (x-width * y-width), with each value repeating once. These numbers are created in CreatePairsArray function.
+
+
+
 
 ## Testing
 (INSERT VALIDATION FOR EACH PAGE AND FILE)
