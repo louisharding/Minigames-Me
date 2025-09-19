@@ -88,9 +88,13 @@ The CreateGrid function creates the grid of cells the user sees. It calls functi
 
 The values in the cells need to range from 1 to half (x-width * y-width), with each value repeating once. These numbers are created in CreatePairsArray function. function "shuffle" shuffles the array.
 
-The div with the class "grid container" is styled as "grid" and takes other stles so it can accept the tiles.
+The div with the class "grid container" is styled as "grid" and takes other styles so it can accept the tiles.
 
 A loop creates divs, which are the cells. Each has an event listener for clicks.
+
+#### Styling
+
+
 
 #### Tile Clicked Function
 Checks if 0, 1, or 2 tiles have been revealed, and does the required behaviour as required. When both are open, the are checked if equal. If the count of matched tiles matches the total number of tiles, you win the game.
