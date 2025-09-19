@@ -21,7 +21,9 @@ This font was chosen for a sci-fi / futuristic / space theme.
 
 ### Colour Scheme
 
-(Color scheme of site)
+Colour palette pulled from the finished website.
+
+![Google fonts - Orbitron font](assets/images/readme/minigames-me-colour-palette.png)
 
 ### Images and Icons
 
@@ -111,7 +113,11 @@ The page was tested in incognito mode in Google Chrome.
 
 Mobile:
 
-Desktop:
+#### Desktop:
+
+##### Whack-a-mole:
+
+![WAM Google chrome lighthouse testing for desktop](assets/images/readme/wam-lighthouse-desktop.png)
 
 ### Code Validation
 
