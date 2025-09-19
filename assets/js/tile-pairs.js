@@ -21,9 +21,10 @@ const createGrid = function(rows, cols) {
     //these two lines saved before changing, just in case
     // cell.textContent = i + 1; // optional: cell number
     // cell.id = i + 1;
-    cell.textContent = pairsArray[i]; //add a class, or change the value, or something?
+    cell.classList.add(pairsArray[i]); //add a class, or change the value, or something?
     cell.textContent = "???"; 
     cell.id = i + 1;
+    cell.addEventListener("click", tileClicked)
     container.appendChild(cell);
   }
 }
@@ -57,4 +58,73 @@ for (let i = 1; i <= highestNumber; i++) {
 return shuffle(pairsArray)
 }
 
-console.log(createPairsArray(4,4))
+console.log(createPairsArray(2,2))
+
+let firstTileClicked = null
+let secondTileClicked = null
+
+const tileTick = function(tile) {
+  tile.textContent = tile.textContent + "✓"
+}
+
+const tileQuestionMarks = function(tile) {
+  if (tile.textContent.includes("✓") === false) {
+  tile.textContent = "???"}
+}
+
+/**This function deals with clicks on tiles (aka cells) */
+let tileClicked = function(e) {
+
+  if (firstTileClicked != null && secondTileClicked != null) {
+    if (firstTileClicked.textContent != "✓" && secondTileClicked.textContent != "✓") {
+    tileQuestionMarks(firstTileClicked)
+      // firstTileClicked.textContent = "???"
+    firstTileClicked = null
+    tileQuestionMarks(secondTileClicked)
+    // secondTileClicked.textContent = "???"
+    secondTileClicked = null
+    console.log("reset")
+    }
+  }
+
+  if (firstTileClicked === null) {
+    e.target.textContent = e.target.className
+    firstTileClicked = e.target
+    console.log("one clicked, first tile:" , firstTileClicked)
+  } else if (secondTileClicked === null) {
+    e.target.textContent = e.target.className
+    secondTileClicked = e.target
+    console.log("two clicked, second tile:" , secondTileClicked)
+  }
+
+  if (firstTileClicked != null && secondTileClicked != null) {
+    console.log("both clicked")
+    
+    let symbolsMatch = false
+
+
+    // matching symbols ✓  :
+    if (firstTileClicked.textContent === secondTileClicked.textContent) {
+      symbolsMatch = true
+      tileTick(firstTileClicked)
+      // firstTileClicked.textContent = firstTileClicked.textContent + "✓"
+      tileTick(secondTileClicked)
+      tilesMatched = tilesMatched + 2
+      if (tilesMatched == textInput1.value * textInput1.value ){
+        alert("Winner Winner Chicken Dinner!!!!")
+      }
+      // secondTileClicked.textContent = secondTileClicked.textContent + "✓"
+    } //else {
+
+    //RESET:
+    // firstTileClicked.textContent = "???"
+    // firstTileClicked = null
+    // secondTileClicked.textContent = "???"
+    // secondTileClicked = null
+    // console.log("reset")
+    }
+  }
+
+  let tilesMatched = 0
+
+createGrid(textInput1.value, textInput2.value)
