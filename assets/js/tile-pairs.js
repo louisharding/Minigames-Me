@@ -121,7 +121,7 @@ let tileClicked = function(e) {
     console.log("both clicked")
     
     let symbolsMatch = false
-
+    
 
     // matching symbols ✓  :
     if (firstTileClicked.textContent === secondTileClicked.textContent) {
@@ -132,6 +132,7 @@ let tileClicked = function(e) {
       tilesMatched = tilesMatched + 2
       if (tilesMatched == textInput1.value * textInput1.value ){
         alert("Winner Winner Chicken Dinner!!!!")
+
       }
       // secondTileClicked.textContent = secondTileClicked.textContent + "✓"
     } //else {
