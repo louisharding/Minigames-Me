@@ -87,16 +87,6 @@ This game gives the user a grid of customizable size. Each cell's value is hidde
 
 ![Alt text](assets\images\readme\tile-pairs screenshot.PNG)
 
-### Tic Tac Toe  
-This game was built using a reusable `<main class="game-container">` layout to maintain consistency across the site. The grid is made of nine clickable tiles, each representing a cell in the classic 3×3 board. JavaScript handles turn-based logic, win/draw detection, and game resets, with randomized starting turns to keep gameplay fresh. The design is responsive and styled using Bootstrap and custom CSS for a clean, arcade-inspired look.
-
-![Screenshot of Tic Tac Toe game](assets/images/readme/tictactoe-screenshot.png)
-
-*A screenshot showing the Tic Tac Toe game layout and interface.*
-
-
-
-
 #### Javascript
 The CreateGrid function creates the grid of cells the user sees. It calls function createPairsArray for the numbers to put in the cells.
 
@@ -112,6 +102,14 @@ Styling is inherited from style.css.
 
 #### Tile Clicked Function
 Checks if 0, 1, or 2 tiles have been revealed, and does the required behaviour as required. When both are open, the are checked if equal. If the count of matched tiles matches the total number of tiles, you win the game.
+
+
+### Tic Tac Toe  
+This game was built using a reusable `<main class="game-container">` layout to maintain consistency across the site. The grid is made of nine clickable tiles, each representing a cell in the classic 3×3 board. JavaScript handles turn-based logic, win/draw detection, and game resets, with randomized starting turns to keep gameplay fresh. The design is responsive and styled using Bootstrap and custom CSS for a clean, arcade-inspired look.
+
+![Screenshot of Tic Tac Toe game](assets/images/readme/tictactoe-screenshot.png)
+
+*A screenshot showing the Tic Tac Toe game layout and interface.*
 
 ## Testing
 (INSERT VALIDATION FOR EACH PAGE AND FILE)
@@ -206,6 +204,7 @@ ChatGPT generated the icons for the Rock Paper Scissors game.
 
 ##### Colour Flipper:
 The small minigame was created with the help of this [video.](https://www.youtube.com/watch?v=3PHXvlpOkf4&t=421s)
+
 
 
 
