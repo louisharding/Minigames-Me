@@ -1,43 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- Custom CSS Stylesheet -->
-    <link rel="stylesheet" href="css/whack-a-mole.css">
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Whack-a-mole game to test your reflexes!" />
+    <title>Minigames Me | Whack-a-mole</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="assets/images/arcadeimage.png"
+            alt="Minigames Logo"
+            class="logo-img"
+          />
+          <span class="ms-2">Minigames-Me</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <!-- Main -->
-    <main>
-        <h1>Whack-a-Mole</h1>
-
-        <button id="start-btn">Start</button>
-
-        <div id="timer">
-            <p>Time Left: <span id="time-left">0</span>s</p>
-        </div>
-
+    <main class="game-container">
+      <h1 class="text-center">Whack-a-Mole <i class="fa-solid fa-gavel fa-flip-horizontal"></i></h1>
+      <div id="game-info" class="d-flex justify-content-between mb-3">
         <div>
-            <p>Score: <span id="score">0</span></p>
+          <button id="start-btn" class="ms-5 px-2">Start</button>
+          <button id="retry-btn" class="px-2" disabled>Retry</button>
         </div>
-
-        <div class="grid">
-            <div id="tile-1" class="tile"></div>
-            <div id="tile-2" class="tile"></div>
-            <div id="tile-4" class="tile"></div>
-            <div id="tile-4" class="tile"></div>
-            <div id="tile-5" class="tile mole"></div>
-            <div id="tile-6" class="tile"></div>
-            <div id="tile-7" class="tile"></div>
-            <div id="tile-8" class="tile"></div>
-            <div id="tile-9" class="tile"></div>
+        <div id="timer" class="px-2">
+          <p>Time Left: <span id="time-left">0</span>s</p>
         </div>
+        <div class="px-2">
+          <p>Score: <span id="score-text">0</span></p>
+        </div>
+      </div>
+      <p id="game-over-message" class="text-center"></p>
+      <div class="game-grid">
+        <div id="tile-1" class="game-tile"></div>
+        <div id="tile-2" class="game-tile"></div>
+        <div id="tile-3" class="game-tile"></div>
+        <div id="tile-4" class="game-tile"></div>
+        <div id="tile-5" class="game-tile"></div>
+        <div id="tile-6" class="game-tile"></div>
+        <div id="tile-7" class="game-tile"></div>
+        <div id="tile-8" class="game-tile"></div>
+        <div id="tile-9" class="game-tile"></div>
+      </div>
     </main>
-    
-
+    <!-- SCRIPTS -->
     <script src="assets/js/whack-a-mole.js"></script>
-</body>
+    <!-- FontAwesome Kit -->
+    <script src="https://kit.fontawesome.com/57fbd21ebd.js" crossorigin="anonymous"></script>
+  </body>
 </html>

@@ -1,0 +1,271 @@
+/* Shared Styles - Optimized */
+:root {
+  --main-font: "Orbitron", sans-serif;
+  --main-bg: #f4f4f9;
+  --main-text: #333;
+  --bg: #f4f4f9;
+  --purple: #4b3f72;
+  --accent: #00c9a7;
+  --text: #333;
+  /* Shooting Star Background - Customizable */
+  --star-img1: url(/assets/images/controllerIcons1.png);
+  --star-img2: url(/assets/images/controllerIcons2.png);
+  --star-img3: url(/assets/images/controllerIcons3.png);
+  --star-img4: url(/assets/images/controllerIcons4.png);
+  --star-opacity: 0.7;
+  --star-size: 64px;
+  --star-hue: 1deg;
+  --star-orientation: 1deg;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--main-font);
+  background: linear-gradient(to bottom,  #000000 33%,#9993ff 70%,#4538ff 85%,#1500ff 98%,#9e24f4 99.9%); 
+  /* background-image: url(/assets/images/controllerIcons.png), linear-gradient(to bottom,  #000000 33%,#9993ff 70%,#4538ff 85%,#1500ff 98%,#9e24f4 99.9%); ; */
+  background-blend-mode: overlay;
+  background-size: 5%;
+  opacity: 0.9;
+  color: var(--main-text);
+  margin: 0;
+  padding: 0;
+}
+
+/* Shooting Star Background */
+.shooting-star-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+}
+.shooting-star {
+  position: absolute;
+  width: var(--star-size);
+  height: var(--star-size);
+  opacity: var(--star-opacity);
+  filter: hue-rotate(var(--star-hue));
+  transform: rotate(var(--star-orientation));
+  background: var(--star-img) no-repeat center/contain;
+  animation: shooting-star-move 3s linear infinite;
+}
+@keyframes shooting-star-move {
+  0% {
+    left: -10vw;
+    transform: scale(1);
+  }
+  100% {
+    left: 110vw;
+    transform: scale(var(--star-end-scale, 0.5));
+  }
+}
+
+
+
+/* Reusable game container for all games */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #8d4c4c;
+  border-radius: 16px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  margin: 3rem auto;
+  max-width: 70vw;
+  width: 95vw;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .game-container {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+}
+/* Shared grid styles for all games */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(3, 1fr);    /* 3 rows */
+  gap: 1rem;
+  width: 100%;
+  max-width: 612px;
+  margin: 0 auto;
+}
+
+/* Generic Game Styles */
+#game-info {
+  display: flex;
+}
+
+#reset:hover {
+  background: #00c9a7;
+  color: #4b3f72;
+}
+
+/* Generic tile for all games */
+.game-tile {
+  width: 100%;
+  aspect-ratio: 1/1;
+  min-width: 60px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #4b3f72;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.12s;
+  background: #eb56ff;
+  font-size: 2rem;
+}
+.game-tile:hover {
+  filter: brightness(65%);
+}
+
+
+/* Minigame specific styles*/
+
+@media (max-width: 400px) {
+  #game {
+    gap: 6px;
+    max-width: 98vw;
+  }
+  .cell {
+    font-size: 1.3rem;
+    width: 28vw;
+    height: 28vw;
+    min-width: 60px;
+    min-height: 60px;
+  }
+}
+
+
+/* Tic tac toe Status text (DISPLAYS STATUS -PLAYER 1 or PLAYER 2 NOT NEEDED */
+#status {
+  color: #4b3f72;
+  font-size: 1.1rem;
+  margin: 0.5rem 0 1rem;
+  text-align: center;
+}
+/* End of Tic Tac Toe */
+
+
+/* Whack-a-mole AKA wam */
+.wam-tile:hover {
+  background: #b2ffb2;
+}
+/* 
+    The .mole class styles the mole element in the Minigames-Me project.
+    Typically used to represent a mole in a whack-a-mole game.
+    Add visual properties, positioning, and animations as needed.
+*/
+.mole, .mole:hover {
+  background-image: url(/assets/images/mole.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+}
+/*End of Mole */
+
+
+/* Media queries */
+@media (max-width: 800px) {
+  .game-container {
+    max-width: 95vw;
+    padding: 1rem;
+    margin: 2rem auto;
+  }
+}
+
+
+
+      /* 
+        The .navbar class styles the navigation bar of the website.
+        It typically contains layout, color, spacing, and positioning rules
+        to ensure consistent appearance and usability across pages.
+      */
+      .navbar {
+        background-color: var(--purple);
+        border-bottom: 3px solid var(--accent);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 0.5rem 0;
+      }
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--accent);
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      .logo-img {
+        display: block;
+        width: 64px;
+        height: 64px;
+        object-fit: contain;
+        border-radius: 10px;
+        border: 2px solid var(--accent);
+      }
+      .navbar-nav .nav-link,
+      .navbar-nav .nav-link.active {
+        border-radius: 6px;
+        color: #222;
+        font-weight: 600;
+        padding: 0.4rem 0.9rem;
+        transition: background-color 0.25s, color 0.25s;
+      }
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link.active:hover {
+        background-color: var(--accent);
+        color: var(--purple);
+      }
+      .navbar-toggler {
+        border: none;
+      }
+      .navbar-toggler-icon {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-image: url("/assets/images/navbar-toggler-icon.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      /*End of Navbar */
+
+
+/* Homepage Styles */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.game-card-hyperlink {
+  border: 2px solid var(--purple);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(75, 63, 114, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem;
+  transition: transform 0.16s, box-shadow 0.16s;
+  text-align: center;
+}
+
+.game-card-hyperlink:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(75, 63, 114, 0.12);
+}
+

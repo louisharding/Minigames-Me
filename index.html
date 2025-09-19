@@ -1,59 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      name="Description"
-      content="A set of minigames to play, including classic Snake."
-    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A set of minigames to play, including classic Snake." />
+    <title>Minigames-Me</title>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
-
-    <title>Minigames Me</title>
-
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
     <!-- Bootstrap 5 CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-
-    <!-- Custom CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-
   <body>
     <header>
-      <h1 class="text-center m-5">Minigames Me</h1>
     </header>
-
-    <main>
-      <!-- List of button links for each game -->
-      <section class="d-grid gap-2 col-4 mx-auto">
-        <a class="btn btn-primary" href="#" role="button">Snake Game</a>
-        <a class="btn btn-primary" href="colour-flipper.html" role="button"
-          >Colour Flipper</a
-        >
-        <a class="btn btn-primary" href="whack-a-mole.html" role="button"
-          >Whack-A-Mole</a
-           <a class="btn btn-primary" href="tictactoe.html" role="button"
-          >Whack-A-Mole</a
-        >
+    <main class="container py-4">
+      <h1 class="text-center mb-4">Minigames Me</h1>
+      <section class="games-grid">
+        <div class="game-card-hyperlink">
+          <h2>Snake Game</h2>
+          <a class="btn btn-primary" href="#" role="button">Play</a>
+        </div>
+        <div class="game-card-hyperlink">
+          <h2>Colour Flipper</h2>
+          <a class="btn btn-primary" href="colour-flipper.html" role="button">Play</a>
+        </div>
+        <div class="game-card-hyperlink">
+          <h2>Whack-A-Mole</h2>
+          <a class="btn btn-primary" href="whack-a-mole.html" role="button">Play</a>
+        </div>
+        <div class="game-card-hyperlink">
+          <h2>Tic Tac Toe</h2>
+          <a class="btn btn-primary" href="tictactoe.html" role="button">Play</a>
+        </div>
+        <div class="game-card-hyperlink">
+          <h2>Rock Paper Scissors</h2>
+          <a class="btn btn-primary" href="rock-paper-scissors.html" role="button">Play</a>
+        </div>
       </section>
     </main>
-
-    <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-      crossorigin="anonymous"
-    ></script>
+    <div class="shooting-star-bg"></div>
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <script>
+function randomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+const starImgs = [
+  'assets/images/star1.png',
+  'assets/images/star2.png',
+  'assets/images/star3.png',
+  'assets/images/star4.png'
+];
+function createShootingStar() {
+  const star = document.createElement('div');
+  star.className = 'shooting-star';
+  const duration = randomInt(2, 5);
+  const top = randomInt(0, 50);
+  star.style.top = top + 'vh';
+  star.style.left = randomInt(-10, 10) + 'vw';
+  star.style.animationDuration = duration + 's';
+  star.style.animationTimingFunction = `cubic-bezier(${Math.random().toFixed(2)},${Math.random().toFixed(2)},${Math.random().toFixed(2)},${Math.random().toFixed(2)})`;
+  star.style.setProperty('--star-end-scale', (Math.random() * 0.5 + 0.3).toFixed(2));
+  // Randomly choose one of the 4 star images
+  star.style.backgroundImage = `url('${starImgs[randomInt(0, starImgs.length - 1)]}')`;
+  document.querySelector('.shooting-star-bg').appendChild(star);
+  setTimeout(() => star.remove(), duration * 1000);
+}
+setInterval(createShootingStar, 800);
+    </script>
   </body>
 </html>
