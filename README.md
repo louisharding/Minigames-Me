@@ -13,7 +13,8 @@ The website is designed with simplicity and access as a main focus, demonstratin
 
 ## Design and Planning:
 ### Typography
-(Fonts used)
+![Google fonts - Orbitron font](assets/images/readme/orbitron-font.png)
+This font was chosen for a sci-fi / futuristic / space theme.
 
 ### Colour Scheme
 (Color scheme of site)
@@ -22,7 +23,6 @@ The website is designed with simplicity and access as a main focus, demonstratin
 
 ##### Whack-a-mole:
 The mole image used in whack-a-mole was generated with the help of chatgpt.
-
 ![Google chrome lighthouse performance](assets/images/mole.webp)
 
 ## Development
@@ -44,7 +44,7 @@ Originally this had a seperate css file that included root variables:
   --grid-size: 612px;
   --border: 2px solid #222; 
 ```
-which were applied across a whack-a-mole.css file. However it was removed as the variables were not used often and was merged into style.css file.
+which were applied across a whack-a-mole.css file. However it was removed as the variables were not used often and the file was merged into the main style.css file.
 
 ##### JavaScript:
 The main functionality of the minigame is shown in this code snippet:
@@ -93,7 +93,10 @@ Desktop:
 ### Code Validation
 
 [HTML Validation](https://validator.w3.org/)
+#### Whack-a-mole:
+While there were some comments about a ```/>``` being used at the end of some elements no other errors were shown.
 
+![WAM HTML validation](assets/images/readme/wam-html-validator.png)
 
 
 [CSS Validation](https://jigsaw.w3.org/css-validator/)
@@ -101,7 +104,10 @@ Desktop:
 
 
 [JavaScript validation](https://jshint.com/)
+#### Whack-a-mole:
+Although JSHint shows 23 warnings it is to do with ES version configuration and is not a problem with the code. 
 
+![WAM JSHint validation](assets/images/readme/wam-jshint.png)
 
 
 ### WAVE Acessibility
@@ -157,5 +163,4 @@ ChatGPT generated the icons for the Rock Paper Scissors game.
 
 ##### Colour Flipper:
 The small minigame was created with the help of this [video.](https://www.youtube.com/watch?v=3PHXvlpOkf4&t=421s)
-
 
