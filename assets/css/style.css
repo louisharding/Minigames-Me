@@ -139,12 +139,34 @@ body {
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.15s, transform 0.12s;
-  background: #3f5efb;
+
+  background: hsla(0, 0%, 1%, 1);
+
   background: radial-gradient(
     circle,
-    rgba(63, 94, 251, 0.55) 0%,
-    rgba(252, 70, 107, 0.52) 100%
+    hsla(0, 0%, 1%, 1) 18%,
+    hsla(241, 100%, 64%, 1) 36%,
+    rgb(99, 107, 126) 44%,
+    hsla(0, 0%, 0%, 1) 59%
   );
+
+    circle,
+    hsla(0, 0%, 1%, 1) 18%,
+    hsla(241, 100%, 64%, 1) 36%,
+    hsla(222, 100%, 54%, 1) 44%,
+    hsla(0, 0%, 0%, 1) 59%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(0, 0%, 1%, 1) 18%,
+    hsla(241, 100%, 64%, 1) 36%,
+    hsla(222, 100%, 54%, 1) 44%,
+    hsla(0, 0%, 0%, 1) 59%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#020202", endColorstr="#4946FF", GradientType=1 );
+
   font-size: 2rem;
 }
 .game-tile:hover {
